@@ -1,0 +1,13 @@
+alias      v="vim"
+alias   grep="grep --color"
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    color="--color=auto"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    color="-G"
+fi
+
+alias     ls="ls $color"
+alias      l="ls"
+alias     la="ls -a"
+alias     ll="ls -l"

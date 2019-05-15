@@ -3,14 +3,12 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 #####
 
-##### Autocompletion configuration
-autoload -U compinit
-compinit
+##### options
 setopt complete_aliases
 setopt auto_menu
 #####
 
-##### zplug
+##### plugins
 # https://github.com/zplug/zplug
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
@@ -24,13 +22,14 @@ zplug "modules/terminal",   from:prezto
 zplug "modules/directory",  from:prezto
 zplug "modules/completion", from:prezto
 zplug "zsh-users/zsh-completions"
-zplug "tarruda/zsh-autosuggestions",            defer:3
-zplug "zsh-users/zsh-syntax-highlighting",      defer:3
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "b4b4r07/enhancd", from:github
-zplug "mafredri/zsh-async", from:github, defer:0
-# theme
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-apple-touchbar", if:"[[ $OSTYPE == *darwin* ]]"
+zplug "b4b4r07/enhancd", use:"init.sh"
+zplug "mafredri/zsh-async", use:"async.zsh" defer:0
+zplug "sindresorhus/pure", use:"pure.zsh", as:theme
+autoload -U compinit && compinit
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
 if ! zplug check; then
     printf "Install zplug plugins? [y/N]: "
