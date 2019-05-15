@@ -1,0 +1,58 @@
+##### language configuration
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+#####
+
+##### Autocompletion configuration
+autoload -U compinit
+compinit
+setopt complete_aliases
+setopt auto_menu
+#####
+
+##### zplug
+# https://github.com/zplug/zplug
+export ZPLUG_HOME=~/.zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "modules/tmux",       from:prezto
+zplug "modules/history",    from:prezto
+zplug "modules/utility",    from:prezto
+zplug "modules/ruby",       from:prezto
+zplug "modules/ssh",        from:prezto
+zplug "modules/terminal",   from:prezto
+zplug "modules/directory",  from:prezto
+zplug "modules/completion", from:prezto
+zplug "zsh-users/zsh-completions"
+zplug "tarruda/zsh-autosuggestions",            defer:3
+zplug "zsh-users/zsh-syntax-highlighting",      defer:3
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "b4b4r07/enhancd", from:github
+zplug "mafredri/zsh-async", from:github, defer:0
+# theme
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
+if ! zplug check; then
+    printf "Install zplug plugins? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
+
+if zplug check zsh-users/zsh-history-substring-search; then
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+fi
+#####
+
+##### source
+if [[ -d ~/.source ]] then
+    for file in ~/.source/**/*(.); source $file;
+fi
+#####
+
+##### only on mac
+# defaults write NSGlobalDomain KeyRepeat -int 0
+#####
