@@ -1,0 +1,21 @@
+- defaults:
+    link:
+        force: true
+
+- clean: ['~']
+
+- shell:
+    # - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init, Installing submodules]
+    - [mkdir -p ~/bin, Creating ~/bin]
+
+- link:
+    ~/.zplug: plugins/zplug
+    ~/.vim_runtime: plugins/vimrc
+    ~/.source: config/source
+    ~/.gitconfig: config/gitconfig
+    ~/.gitignore_global: config/gitignore_global
+    ~/bin/diff-so-fancy:
+        path: plugins/diff-so-fancy/diff-so-fancy
+        create: true
+    ~/.zshrc: config/zshrc
