@@ -19,6 +19,7 @@
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
     ~/.zshrc: config/zshrc
+    ~/.vscode: vscode
 
 - shell:
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
