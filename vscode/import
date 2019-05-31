@@ -2,5 +2,5 @@
 
 while read x; do
     echo "installing ... $x"
-    code --extensions-dir ~/.vscode/extensions --install-extension $x
+    code --extensions-dir ~/.vscode/extensions --force --install-extension $x
 done < ./extensions.txt
