@@ -8,6 +8,7 @@
     # - [git submodule update --init --recursive, Installing submodules]
     - [git submodule update --init, Installing submodules]
     - [mkdir -p ~/bin, Creating ~/bin]
+    - [mkdir -p ~/workspace, Creating ~/workspace]
 
 - link:
     ~/.zplug: plugins/zplug
