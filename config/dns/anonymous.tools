@@ -1,0 +1,12 @@
+
+anonymous.tools.	3600	IN	SOA	anonymous.tools. root.anonymous.tools. 2031145525 7200 3600 86400 3600
+
+anonymous.tools.	1	IN	A	185.199.111.153
+anonymous.tools.	1	IN	A	185.199.110.153
+anonymous.tools.	1	IN	A	185.199.109.153
+anonymous.tools.	1	IN	A	185.199.108.153
+
+anonymous.tools.	1	IN	MX	20 mx2.forwardemail.net.
+anonymous.tools.	1	IN	MX	10 mx1.forwardemail.net.
+
+anonymous.tools.	1	IN	TXT	"forward-email=4nonymoustools@gmail.com"
