@@ -20,6 +20,7 @@
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
     ~/.zshrc: config/zshrc
+    ~/.tmux.conf: config/tmux.conf
     ~/.vscode: vscode
 
 - shell:

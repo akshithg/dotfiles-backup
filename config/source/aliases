@@ -12,3 +12,6 @@ alias      l="ls"
 alias     la="ls -a"
 alias     ll="ls -l"
 alias      c="clear"
+
+alias python="python3"
+alias pip="pip3"
