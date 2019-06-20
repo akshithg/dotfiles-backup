@@ -52,6 +52,7 @@ if [[ -d ~/.source ]] then
 fi
 #####
 
-##### only on mac
-# defaults write NSGlobalDomain KeyRepeat -int 0
-#####
+##### speed up curzor on mac
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    defaults write NSGlobalDomain KeyRepeat -int 0
+fi
