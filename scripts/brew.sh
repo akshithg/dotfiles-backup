@@ -3,6 +3,10 @@
 # install brew
 brew_setup(){
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+brew_update(){
+    echo "brew update ..."
     brew update && brew upgrade && brew cleanup
 }
 
@@ -45,6 +49,7 @@ install_extras(){
 
 install_all(){
     echo "installing all ..."
+    brew_update
     install_basic
     install_dev
     install_writing

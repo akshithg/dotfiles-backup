@@ -7,6 +7,6 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     source ~/.local/bin/virtualenvwrapper.sh
-elif [[ "$OSTYPE" ]]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
