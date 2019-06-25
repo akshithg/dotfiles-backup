@@ -26,3 +26,5 @@
 - shell:
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
     - [pip3 install virtualenvwrapper, Setting up virtualenvwrapper]
+    - [zsh -ic 'zplug install'; exit 0, Installing zsh plugins]
+      # cuz https://github.com/zplug/zplug/issues/272
