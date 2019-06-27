@@ -1,4 +1,4 @@
-alias v="vim"
+alias c="clear"
 alias grep="grep --color"
 
 # ls
@@ -7,12 +7,17 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     color="-G"
 fi
-
 alias ls="ls $color"
 alias l="ls"
 alias la="ls -a"
 alias ll="ls -l"
-alias c="clear"
+
+alias me="whoami"
+
+# equivalent to mac's open
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+     alias open="xdg-open"
+fi
 
 # python
 alias python="python3"
@@ -23,4 +28,6 @@ alias t="tmux attach || tmux new-session \; split-window -v \; split-window -h"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new-session"
+
+alias v="vim"
 

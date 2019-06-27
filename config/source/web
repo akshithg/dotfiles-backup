@@ -1,0 +1,69 @@
+# encode space
+_es () {
+    echo "$@" | sed -e "s@ @%20@g"
+}
+
+_pr () {
+    echo $1
+    open $1
+}
+
+# bitbucket
+bb () {
+    url="https://bitbucket.com/`_es $@`"
+    _pr $url
+}
+
+# dblp
+db () {
+    url="https://dblp.uni-trier.de/search?q=`_es $@`"
+    _pr $url
+}
+
+# explain shell
+es () {
+    url="https://explainshell.com/explain?cmd=`_es $@`"
+    _pr $url
+}
+
+# google
+g () {
+    url="https://www.google.com/search?q=`_es $@`"
+    _pr $url
+}
+
+# github
+gh () {
+    url="https://github.com/`_es $@`"
+    _pr $url
+}
+
+# github search
+ghs () {
+    url="https://github.com/search?q=`_es $@`"
+    _pr $url
+}
+
+# google scholar
+gs () {
+    url="https://scholar.google.com/scholar?q=`_es $@`"
+    _pr $url
+}
+
+# netflix
+nf () {
+    url="https://www.netflix.com/search?q=`_es $@`"
+    _pr $url
+}
+
+# twitter
+tw () {
+    url="https://twitter.com/search?q=`_es $@`"
+    _pr $url
+}
+
+# youtube
+yt () {
+    url="https://www.youtube.com/results?search_query=`_es $@`"
+    _pr $url
+}
