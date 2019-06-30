@@ -5,4 +5,4 @@ then
     mv -f ./extensions.txt ./extensions.txt.old
 fi
 
-code --list-extensions --show-versions > ./extensions.txt
+code --list-extensions > ./extensions.txt
