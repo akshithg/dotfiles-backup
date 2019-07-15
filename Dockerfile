@@ -1,10 +1,7 @@
-# base image
 FROM ubuntu:18.04
 
 RUN apt-get -q update && \
-    # upgrade - not good practice, but this isn't production ¯\_(ツ)_/¯
-    apt-get upgrade -y && \
-    apt-get install -y \
+    apt-get install --no-install-recommends -y \
         build-essential \
         gawk \
         g++ gcc \
@@ -21,6 +18,7 @@ RUN apt-get -q update && \
         unzip \
         wget \
         zsh && \
+    rm -rf /var/lib/apt/lists/* && \
     locale-gen en_US.UTF-8
 
 RUN useradd --create-home --shell /usr/bin/zsh g
