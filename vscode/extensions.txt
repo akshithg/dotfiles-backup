@@ -3,8 +3,8 @@ bungcip.better-toml
 codezombiech.gitignore
 DavidAnson.vscode-markdownlint
 davidhouchin.whitespace-plus
+dracula-theme.theme-dracula
 eamodio.gitlens
-Equinusocio.vsc-material-theme
 formulahendry.auto-close-tag
 formulahendry.code-runner
 hars.CppSnippets
@@ -17,9 +17,10 @@ ms-python.python
 ms-vscode.atom-keybindings
 ms-vscode.cpptools
 ms-vscode.Go
-PKief.material-icon-theme
 RReverser.llvm
 stkb.rewrap
 streetsidesoftware.code-spell-checker
+viktorqvarfordt.vscode-pitch-black-theme
+vscode-icons-team.vscode-icons
 xabikos.JavaScriptSnippets
 yzhang.markdown-all-in-one

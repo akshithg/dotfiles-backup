@@ -1,6 +1,11 @@
 #!/bin/sh
 
+read -p "Purge existing extentions?" yn
+case $yn in
+    [Yy]* ) rm -rf ~/.vscode/extensions; break;;
+    [Nn]* ) echo "intalling alongside existing extentions";;
+esac
+
 while read x; do
-    echo "installing ... $x"
-    code --extensions-dir ~/.vscode/extensions --force --install-extension $x
+    code --extensions-dir ~/.vscode/extensions --force --install-extension  $x
 done < ./extensions.txt
