@@ -1,0 +1,10 @@
+authtoken:
+
+tunnels:
+  ssh:
+    proto: tcp
+    addr: 2222
+
+  http:
+    proto: http
+    addr: 8080

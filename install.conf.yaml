@@ -22,6 +22,7 @@
     ~/.zshrc: config/zshrc
     ~/.tmux.conf: config/tmux.conf
     ~/.vscode: vscode
+    ~/.ngrok2: ngrok2
 
 - shell:
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]

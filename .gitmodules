@@ -9,10 +9,7 @@
 	url = https://github.com/amix/vimrc
 [submodule "plugins/diff-so-fancy"]
 	path = plugins/diff-so-fancy
-	url = https://github.com/so-fancy/diff-so-fancy
-[submodule "theme/dracula-theme"]
-	path = theme/dracula-theme
-	url = https://github.com/dracula/dracula-theme/
+    url = https://github.com/so-fancy/diff-so-fancy
 [submodule "themes/dracula-theme"]
 	path = themes/dracula-theme
 	url = https://github.com/dracula/dracula-theme/
