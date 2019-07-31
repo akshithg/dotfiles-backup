@@ -27,7 +27,8 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-apple-touchbar", if:"[[ $OSTYPE == *darwin* ]]"
 zplug "b4b4r07/enhancd", use:"init.sh"
 zplug "mafredri/zsh-async", use:"async.zsh" defer:0
-zplug "sindresorhus/pure", use:"pure.zsh", as:theme
+#zplug "sindresorhus/pure", use:"pure.zsh", as:theme
+zplug "dracula/zsh", as:theme
 autoload -U compinit && compinit
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
@@ -51,3 +52,6 @@ if [[ -d ~/.source ]] then
     for file in ~/.source/**/*(.); source $file;
 fi
 #####
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
