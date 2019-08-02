@@ -11,18 +11,21 @@
     - [mkdir -p ~/workspace, Creating ~/workspace]
 
 - link:
-    ~/.zplug: plugins/zplug
-    ~/.vim_runtime: plugins/vimrc
-    ~/.source: config/source
-    ~/.gitconfig: config/gitconfig
-    ~/.gitignore_global: config/gitignore_global
     ~/bin/diff-so-fancy:
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
-    ~/.zshrc: config/zshrc
+    ~/.gitconfig: config/gitconfig
+    ~/.gitignore_global: config/gitignore_global
+    ~/.ngrok2: config/ngrok2
+    ~/.secrets:
+        path: config/secrets
+        force: false
+    ~/.source: config/source
     ~/.tmux.conf: config/tmux.conf
+    ~/.vim_runtime: plugins/vimrc
     ~/.vscode: vscode
-    ~/.ngrok2: ngrok2
+    ~/.zplug: plugins/zplug
+    ~/.zshrc: config/zshrc
 
 - shell:
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
