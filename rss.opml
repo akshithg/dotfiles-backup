@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>A subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Papers" title="Papers">
+            <outline type="rss" text="cs.CR updates on arXiv.org" title="cs.CR updates on arXiv.org" xmlUrl="http://arxiv.org/rss/cs.CR" htmlUrl="http://arxiv.org/"/>
+            <outline type="rss" text="the morning paper" title="the morning paper" xmlUrl="http://blog.acolyer.org/feed/" htmlUrl="https://blog.acolyer.org"/>
+        </outline>
+        <outline text="Comics" title="Comics">
+            <outline type="rss" text="CommitStrip" title="CommitStrip" xmlUrl="http://www.commitstrip.com/en/feed/" htmlUrl="http://www.commitstrip.com"/>
+            <outline type="rss" text="xkcd" title="xkcd" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/"/>
+            <outline type="rss" text="Explosm" title="Explosm" xmlUrl="http://feeds.feedburner.com/Explosm" htmlUrl="http://explosm.net"/>
+            <outline type="rss" text="PHD Comics" title="PHD Comics" xmlUrl="http://www.phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com"/>
+            <outline type="rss" text="The Oatmeal" title="The Oatmeal" xmlUrl="http://theoatmeal.com/feed/rss" htmlUrl="http://theoatmeal.com/"/>
+        </outline>
+        <outline text="Must Read" title="Must Read"/>
+        <outline text="Crypto" title="Crypto">
+            <outline type="rss" text="Chain" title="Chain" xmlUrl="http://blog.chain.com/rss" htmlUrl="https://blog.chain.com?source=rss----e0008d102434---4"/>
+            <outline type="rss" text="Gavin Andresen" title="Gavin Andresen" xmlUrl="http://gavinandresen.ninja/feed" htmlUrl="http://gavinandresen.ninja"/>
+            <outline type="rss" text="The Control" title="The Control" xmlUrl="https://thecontrol.co/feed" htmlUrl="https://thecontrol.co?source=rss----ce012282ea98---4"/>
+            <outline type="rss" text="Vitalik Buterin's website" title="Vitalik Buterin's website" xmlUrl="http://vitalik.ca/feed.xml" htmlUrl="https://vitalik.ca/"/>
+            <outline type="rss" text="Stories by Vlad Zamfir on Medium" title="Stories by Vlad Zamfir on Medium" xmlUrl="https://medium.com/feed/@Vlad_Zamfir" htmlUrl="https://medium.com/@Vlad_Zamfir?source=rss-aa9bb0a9d2ad------2"/>
+            <outline type="rss" text="Peter Todd" title="Peter Todd" xmlUrl="https://petertodd.org/feed.xml" htmlUrl="https://petertodd.org/"/>
+            <outline type="rss" text="Stories by Andreas M. Antonopoulos on Medium" title="Stories by Andreas M. Antonopoulos on Medium" xmlUrl="https://medium.com/feed/@aantonop" htmlUrl="https://medium.com/@aantonop?source=rss-898f59563d67------2"/>
+            <outline type="rss" text="Decred Blog" title="Decred Blog" xmlUrl="https://blog.decred.org/feed.xml" htmlUrl="https://blog.decred.org/"/>
+            <outline type="rss" text="Coin Center" title="Coin Center" xmlUrl="https://coincenter.org/rss/feed.xml" htmlUrl="https://coincenter.org/"/>
+        </outline>
+        <outline text="Entrepreneurship" title="Entrepreneurship">
+            <outline type="rss" text="Stratechery by Ben Thompson" title="Stratechery by Ben Thompson" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com"/>
+        </outline>
+        <outline text="Privacy" title="Privacy">
+            <outline type="rss" text="Privacy International" title="Privacy International" xmlUrl="https://www.privacyinternational.org/rss.xml" htmlUrl="http://www.privacyinternational.org/rss.xml"/>
+            <outline type="rss" text="Updates from the Tor Project" title="Updates from the Tor Project" xmlUrl="https://blog.torproject.org/blog/feed" htmlUrl="https://blog.torproject.org/blog/feed"/>
+        </outline>
+    </body>
+</opml>
