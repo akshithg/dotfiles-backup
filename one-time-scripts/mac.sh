@@ -5,6 +5,11 @@ then
     echo "Not MacOS. Exiting."
 fi
 
+# install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-defaults write NSGlobalDomain InitialKeyRepeat -int 0
+# install all packages from Brewfile
+brew bundle
+
+# add zsh to /etc/shells
+echo `which zsh` | sudo tee -a /etc/shells
