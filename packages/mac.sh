@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-source  ../pretty-print.sh
+SCRIPTDIR="${0%/*}"
+source  $SCRIPTDIR/../pretty-print.sh
+
 pHeader "Setting up MacOS"
 # MacOS-only stuff. Abort if not MacOS.
 if [[ $(uname -s) != "Darwin" ]]; then
@@ -8,7 +10,7 @@ if [[ $(uname -s) != "Darwin" ]]; then
 fi
 
 # install homebrew
-pStep "Installing homebrew"
+pStep "Installing homebrew..."
 if [[ -x "$(command -v brew)" ]]; then
     pGood "Homebrew already present"
 else
@@ -17,8 +19,8 @@ else
 fi
 
 # install all packages from Brewfile
-pStep "Installing formulas in the Brewfile"
-if brew bundle; then
+pStep "Installing formulas in the Brewfile..."
+if brew bundle --file=$SCRIPTDIR/Brewfile; then
     pGood "All formulas were installed"
 else
     pBad "Something went wrong"
@@ -33,7 +35,7 @@ else
     pGood "Success"
 fi
 
-pStep "Applying Hacker Setting"
+pStep "Applying Hacker Settings..."
 
 # Show remaining battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
@@ -245,4 +247,4 @@ pGood "Screenshots"
 # for app in Chrome Safari Finder Dock Mail SystemUIServer; do killall "$app" > /dev/null 2>&1; done
 # echo "Done. Note that some of these changes require a logout/restart to take effect."
 
-pFinishStep "DONE!"
+pFinishStep "Done!"
