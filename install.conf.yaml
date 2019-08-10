@@ -7,6 +7,17 @@
 - shell:
     # - [git submodule update --init --recursive, Installing submodules]
     - [git submodule update --init, Installing submodules]
+    -
+      command: ./packages/install.sh
+      description: Installing software packages
+      quiet: false
+      stdin: true
+      stdout: true
+      stderr: true
+    -
+      command: pip3 install -r ./packages/pipfile
+      description: Installing python global modules
+      quiet: false
     - [mkdir -p ~/bin, Creating ~/bin]
     - [mkdir -p ~/workspace, Creating ~/workspace]
 
@@ -21,6 +32,9 @@
         path: config/secrets
         force: false
     ~/.source: config/source
+    ~/.ssh:
+        path: config/ssh
+        force: false
     ~/.tmux.conf: config/tmux.conf
     ~/.vim_runtime: plugins/vimrc
     ~/.vscode: vscode
@@ -29,5 +43,5 @@
 
 - shell:
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
-    - [zsh -ic 'zplug install'; exit 0, Installing zsh plugins]
-      # cuz https://github.com/zplug/zplug/issues/272
+    - [if ! zsh -ic "zplug check"; then zsh -ic 'zplug install'; exit 0; fi, Installing zsh plugins]
+      # exit 0 cuz https://github.com/zplug/zplug/issues/272

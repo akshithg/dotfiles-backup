@@ -1,0 +1,7 @@
+Host desk
+    HostName desk.local
+    User g
+    IdentityFile ~/.ssh/id_desk
+
+Host github.com
+    IdentityFile ~/.ssh/id_github
