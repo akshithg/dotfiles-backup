@@ -32,6 +32,9 @@
         path: config/secrets
         force: false
     ~/.source: config/source
+    ~/.ssh:
+        path: config/ssh
+        force: false
     ~/.tmux.conf: config/tmux.conf
     ~/.vim_runtime: plugins/vimrc
     ~/.vscode: vscode
