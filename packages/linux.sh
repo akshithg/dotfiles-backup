@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPTDIR="${0%/*}"
-source  $SCRIPTDIR/../pretty-print.sh
+source $SCRIPTDIR/../pretty-print.sh
 
 pHeader "Setting up Linux"
 # Linux-only stuff. Abort if not Linux.
@@ -14,8 +14,14 @@ pStep "Installing packages..."
 sudo apt-get -q update && apt-get install --no-install-recommends -y \
     build-essential \
     gawk \
-    g++ gcc \
+    g++ \
+    gcc \
     git \
+    git-extras \
+    git-flow \
+    git-lfs \
+    golang \
+    htop \
     iproute2 \
     locales \
     python3 \
@@ -24,6 +30,7 @@ sudo apt-get -q update && apt-get install --no-install-recommends -y \
     ssh \
     sudo \
     tmux \
+    tree \
     vim \
     unzip \
     wget \
@@ -31,4 +38,3 @@ sudo apt-get -q update && apt-get install --no-install-recommends -y \
 rm -rf /var/lib/apt/lists/* && \
 locale-gen en_US.UTF-8
 pFinishStep "Done!"
-
