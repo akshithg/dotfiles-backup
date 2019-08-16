@@ -11,10 +11,10 @@ hars.CppSnippets
 HookyQR.beautify
 IBM.output-colorizer
 James-Yu.latex-workshop
+mechatroner.rainbow-csv
 mitaki28.vscode-clang
 ms-azuretools.vscode-docker
 ms-python.python
-ms-vscode.atom-keybindings
 ms-vscode.cpptools
 ms-vscode.Go
 RReverser.llvm
@@ -22,5 +22,6 @@ stkb.rewrap
 streetsidesoftware.code-spell-checker
 viktorqvarfordt.vscode-pitch-black-theme
 vscode-icons-team.vscode-icons
+vscodevim.vim
 xabikos.JavaScriptSnippets
 yzhang.markdown-all-in-one

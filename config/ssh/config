@@ -1,6 +1,11 @@
+User g
+
 Host desk
     HostName desk.local
-    User g
+    IdentityFile ~/.ssh/id_desk
+
+Host deskng
+    HostName tcp://0.tcp.ngrok.io
     IdentityFile ~/.ssh/id_desk
 
 Host github.com
