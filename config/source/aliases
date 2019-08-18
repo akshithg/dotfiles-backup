@@ -30,7 +30,7 @@ alias python="python3"
 alias    pip="pip3"
 
 # tmux
-alias  t="tmux attach || tmux new-session \; split-window -v \; split-window -h"
+alias  t="tmux attach || tmux new-session \; split-window -h \;"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new-session"

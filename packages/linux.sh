@@ -24,6 +24,7 @@ sudo apt-get -q update && apt-get install --no-install-recommends -y \
     htop \
     iproute2 \
     locales \
+    pkg-config \
     python3 \
     python3-pip \
     python3-dev \
