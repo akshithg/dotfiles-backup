@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f ./extensions ]
+if [ -f ./extensions.txt ]
 then
     mv -f ./extensions.txt ./extensions.txt.old
 fi
