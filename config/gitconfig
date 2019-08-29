@@ -34,6 +34,7 @@
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = /Users/akshithg/.gitignore_global
+    editor = vim
 
 [filter "lfs"]
     smudge = git-lfs smudge -- %f

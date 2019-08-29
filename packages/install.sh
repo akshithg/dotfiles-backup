@@ -24,6 +24,6 @@ pStep "System Setup"
 if [ "$OS" == "Darwin" ]; then
     $SCRIPTDIR/mac.sh
 elif [ "$OS" == "Linux" ]; then
-    $SCRIPTDIR./linux.sh
+    $SCRIPTDIR/linux.sh
 fi
 pFinishStep "Done!"

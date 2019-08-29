@@ -13,3 +13,6 @@
 [submodule "themes/dracula-theme"]
 	path = themes/dracula-theme
 	url = https://github.com/dracula/dracula-theme/
+[submodule "plugins/peda"]
+	path = plugins/peda
+	url = https://github.com/longld/peda.git
