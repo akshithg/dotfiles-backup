@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 SCRIPTDIR="${0%/*}"
-source  $SCRIPTDIR/../pretty-print.sh
+source  $SCRIPTDIR/../pretty-print
 
 pHeader "Setting up MacOS"
 # MacOS-only stuff. Abort if not MacOS.

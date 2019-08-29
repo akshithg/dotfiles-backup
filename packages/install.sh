@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPTDIR="${0%/*}"
-source $SCRIPTDIR/../pretty-print.sh
+source $SCRIPTDIR/../pretty-print
 
 
 pHeader "First time setup"

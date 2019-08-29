@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPTDIR="${0%/*}"
-source $SCRIPTDIR/../pretty-print.sh
+source $SCRIPTDIR/../pretty-print
 
 pHeader "Setting up Linux"
 # Linux-only stuff. Abort if not Linux.
