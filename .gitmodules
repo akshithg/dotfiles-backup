@@ -14,5 +14,8 @@
 	path = themes/dracula-theme
 	url = https://github.com/dracula/dracula-theme/
 [submodule "plugins/peda"]
-	path = plugins/peda
+	path = plugins/gdb/peda
 	url = https://github.com/longld/peda.git
+[submodule "plugins/gdb/gdb-dashboard"]
+	path = plugins/gdb/gdb-dashboard
+	url = https://github.com/cyrus-and/gdb-dashboard.git

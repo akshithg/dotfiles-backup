@@ -25,11 +25,11 @@
     ~/bin/diff-so-fancy:
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
+    ~/.gdb: plugins/gdb
     ~/.gdbinit: config/gdbinit
     ~/.gitconfig: config/gitconfig
     ~/.gitignore_global: config/gitignore_global
     ~/.ngrok2: config/ngrok2
-    ~/peda: plugins/peda
     ~/.source: config/source
     ~/.ssh:
         path: config/ssh

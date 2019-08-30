@@ -1,1 +1,3 @@
-source ~/peda/peda.py
+source ~/.gdb/peda/peda.py
+source ~/.gdb/gdb-dashboard/.gdbinit
+
