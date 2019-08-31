@@ -18,7 +18,7 @@ while true; do
         * ) pBad "Please answer yes or no.";;
     esac
 done
-pFinishStep "OS detection complete, preceeding to setup..."
+pFinishStep "OS detection complete, proceeding to setup..."
 
 pStep "System Setup"
 if [ "$OS" == "Darwin" ]; then

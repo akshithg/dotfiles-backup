@@ -11,12 +11,7 @@ alias    v="vim"
 # look in .gitconfig
 
 # ls
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    color="--color=always"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    color="-G"
-fi
-alias ls="ls $color -a"
+alias ls="ls --color=always -a"
 alias  l="ls"
 alias ll="ls -l"
 

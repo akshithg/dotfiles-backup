@@ -8,16 +8,24 @@ tap 'homebrew/core'
 tap 'homebrew/livecheck'
 tap 'homebrew/services'
 
+brew 'coreutils' #gnu
 brew 'doctl'
+brew 'ed' #gnu
+brew 'findutils' #gnu
+brew 'gawk' #gnu
 brew 'git'
 brew 'git-extras'
 brew 'git-flow'
 brew 'git-lfs'
+brew 'gnu-sed' #gnu
+brew 'gnu-tar' #gnu
 brew 'go'
+brew 'grep' #gnu
 brew 'htop'
 brew 'hugo'
 brew 'iproute2mac'
-brew 'make' # gnu
+brew 'make' #gnu
+brew 'openvpn'
 brew 'pkg-config'
 brew 'python'
 brew 'tmux'

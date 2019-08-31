@@ -4,6 +4,7 @@
 
 - clean: ['~']
 
+# install packages before config
 - shell:
     # - [git submodule update --init --recursive, Installing submodules]
     - [git submodule update --init, Installing submodules]
@@ -21,14 +22,15 @@
     - [mkdir -p ~/bin, Creating ~/bin]
     - [mkdir -p ~/workspace, Creating ~/workspace]
 
+# symlink config files
 - link:
     ~/bin/diff-so-fancy:
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
     ~/.gdb: plugins/gdb
     ~/.gdbinit: config/gdbinit
-    ~/.gitconfig: config/gitconfig
-    ~/.gitignore_global: config/gitignore_global
+    ~/.gitconfig: config/git/gitconfig
+    ~/.gitignore_global: config/git/gitignore_global
     ~/.ngrok2: config/ngrok2
     ~/.source: config/source
     ~/.ssh:
@@ -36,7 +38,7 @@
         force: false
     ~/.tmux.conf: config/tmux.conf
     ~/.vim_runtime: plugins/vimrc
-    ~/.vscode: vscode
+    ~/.vscode: config/vscode
     ~/.zplug: plugins/zplug
     ~/.zshrc: config/zshrc
 
