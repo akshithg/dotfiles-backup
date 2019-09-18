@@ -11,7 +11,7 @@ fi
 
 # install packages
 pStep "Installing packages..."
-sudo apt-get -q update && apt-get install --no-install-recommends -y \
+sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     build-essential \
     gawk \
     g++ \
