@@ -27,8 +27,10 @@ sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     locales \
     pkg-config \
     python3 \
-    python3-pip \
     python3-dev \
+    python3-pip \
+    python3-setuptools \
+    python3-wheel \
     ssh \
     sudo \
     tmux \
@@ -37,6 +39,6 @@ sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     unzip \
     wget \
     zsh && \
-rm -rf /var/lib/apt/lists/* && \
+sudo rm -rf /var/lib/apt/lists/* && \
 locale-gen en_US.UTF-8
 pFinishStep "Done!"
