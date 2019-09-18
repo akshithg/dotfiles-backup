@@ -3,7 +3,6 @@
 OS=`uname -s`
 
 if [ "$OS" == "Darwin" ]; then
-    ln ~/Library/Application\ Support/Code/User/keybindings.json ~/.vscode/keybindings.json
-    ln ~/Library/Application\ Support/Code/User/settings.json ~/.vscode/settings.json
-    ln ~/Library/Application\ Support/Code/User/snippets ~/.vscode/snippets
+    ln -nsf ~/Library/Application\ Support/Code/User/keybindings.json ~/.vscode/keybindings.json
+    ln -nsf ~/Library/Application\ Support/Code/User/settings.json ~/.vscode/settings.json
 fi

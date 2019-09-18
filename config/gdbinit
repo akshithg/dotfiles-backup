@@ -1,3 +1,2 @@
-source ~/.gdb/gdb-dashboard/.gdbinit
-source ~/.gdb/peda/peda.py
+source /home/g/.dotfiles/plugins/pwndbg/gdbinit.py
 

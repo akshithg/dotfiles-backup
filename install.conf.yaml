@@ -27,7 +27,6 @@
     ~/bin/diff-so-fancy:
         path: plugins/diff-so-fancy/diff-so-fancy
         create: true
-    ~/.gdb: plugins/gdb
     ~/.gdbinit: config/gdbinit
     ~/.gitconfig: config/git/gitconfig
     ~/.gitignore_global: config/git/gitignore_global

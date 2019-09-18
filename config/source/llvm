@@ -1,0 +1,11 @@
+use_llvm () {
+    OS=`uname -s`
+    if [ "$OS" == "Darwin" ]; then
+        export LDFLAGS="-L/usr/local/opt/libffi/lib"
+        export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+        LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+        export PATH="/usr/local/opt/llvm/bin:$PATH"
+        export LDFLAGS="-L/usr/local/opt/llvm/lib"
+        export CPPFLAGS="-I/usr/local/opt/llvm/include"
+    fi
+}
