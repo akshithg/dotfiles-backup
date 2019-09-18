@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+$OS=`uname -s`
+
+if [ "$OS" == "Darwin" ]; then
+    
+    ln ~/Library/Application\ Support/Code/User/keybindings.json ~/.vscode/keybindings.json
+    ln ~/Library/Application\ Support/Code/User/settings.json ~/.vscode/settings.json
+    ln ~/Library/Application\ Support/Code/User/snippets ~/.vscode/snippets
+
+elif [ "$OS" == "Linux" ]; then
+
+fi

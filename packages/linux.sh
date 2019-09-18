@@ -16,6 +16,7 @@ sudo apt-get -q update && apt-get install --no-install-recommends -y \
     gawk \
     g++ \
     gcc \
+    gdb \
     git \
     git-extras \
     git-flow \

@@ -43,6 +43,7 @@
     ~/.zshrc: config/zshrc
 
 - shell:
+    - [sh ~/.vscode/symlink, Setting up vscode settings]
     - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
     - [if ! zsh -ic "zplug check"; then zsh -ic 'zplug install'; exit 0; fi, Installing zsh plugins]
       # exit 0 cuz https://github.com/zplug/zplug/issues/272

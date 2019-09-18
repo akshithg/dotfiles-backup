@@ -10,14 +10,14 @@ OS=`uname -s`
 ARCH=`uname -m`
 pGood "Detected: $OS on $ARCH"
 
-while true; do
-    read -p "Continue with setup?" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit 0;;
-        * ) pBad "Please answer yes or no.";;
-    esac
-done
+# while true; do
+#     read -p "Continue with setup?" yn
+#     case $yn in
+#         [Yy]* ) break;;
+#         [Nn]* ) exit 0;;
+#         * ) pBad "Please answer yes or no.";;
+#     esac
+# done
 pFinishStep "OS detection complete, proceeding to setup..."
 
 pStep "System Setup"

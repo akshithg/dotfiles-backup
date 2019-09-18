@@ -11,9 +11,9 @@ alias    v="vim"
 # look in .gitconfig
 
 # ls
-alias ls="ls --color=always -a"
-alias  l="ls"
-alias ll="ls -l"
+alias ls="ls --color=always"
+alias  l="ls -la"
+alias ll="ls -h"
 
 # open
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
