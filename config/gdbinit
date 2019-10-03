@@ -1,2 +1,1 @@
-source /home/g/.dotfiles/plugins/pwndbg/gdbinit.py
-
+source ~/.dotfiles/plugins/pwndbg/gdbinit.py

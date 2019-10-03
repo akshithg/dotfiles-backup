@@ -7,6 +7,9 @@ alias grep="grep --color=always"
 alias less="less -R"
 alias    v="vim"
 
+# gdb
+alias gdb="gdb -q"
+
 # git
 # look in .gitconfig
 

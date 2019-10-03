@@ -30,7 +30,9 @@
     ~/.gdbinit: config/gdbinit
     ~/.gitconfig: config/git/gitconfig
     ~/.gitignore_global: config/git/gitignore_global
-    ~/.ngrok2: config/ngrok2
+    ~/.ngrok2:
+        path: config/ngrok2
+        force: false
     ~/.source: config/source
     ~/.ssh:
         path: config/ssh

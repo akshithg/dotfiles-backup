@@ -60,3 +60,11 @@ fi
 #####
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+##### greeting
+if command -v neofetch &>/dev/null ; then
+    neofetch
+elif command -v cowsay &>/dev/null ; then
+    cowsay
+fi
+#####

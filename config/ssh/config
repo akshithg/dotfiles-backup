@@ -1,12 +1,24 @@
-User g
-
 Host desk
+    User g
     HostName desk.local
     IdentityFile ~/.ssh/id_desk
 
 Host deskng
+    User g
     HostName tcp://0.tcp.ngrok.io
     IdentityFile ~/.ssh/id_desk
 
 Host github.com
+    User akshithg
     IdentityFile ~/.ssh/id_github
+
+Host cs
+    User akshithg
+    HostName vm-ctf5.eecs.oregonstate.edu
+    IdentityFile ~/.ssh/id_cs
+
+Host ivy
+    User akshithg
+    HostName ivy.unexploitable.systems
+    IdentityFile ~/.ssh/id_cs
+
