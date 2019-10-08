@@ -64,7 +64,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ##### greeting
 if command -v neofetch &>/dev/null ; then
     neofetch
-elif command -v cowsay &>/dev/null ; then
-    cowsay
+elif command -v fortune &>/dev/null ; then
+    fortune
 fi
 #####

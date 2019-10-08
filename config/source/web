@@ -8,6 +8,12 @@ _pr () {
     open $1
 }
 
+# asm
+asm () {
+    url="https://www.felixcloutier.com/x86/`_es $@`"
+    _pr $url
+}
+
 # bitbucket
 bb () {
     url="https://bitbucket.com/`_es $@`"
