@@ -1,7 +1,7 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.acceptSuggestionOnEnter": "off",
     "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorStyle": "line",
     "editor.find.addExtraSpaceOnTop": true,
     "editor.find.autoFindInSelection": true,
@@ -9,6 +9,10 @@
     "editor.minimap.renderCharacters": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderFinalNewline" : true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80
+    ],
     "editor.trimAutoWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
