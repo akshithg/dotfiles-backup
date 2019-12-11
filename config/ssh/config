@@ -10,15 +10,20 @@ Host deskng
 
 Host github.com
     User akshithg
-    IdentityFile ~/.ssh/id_github
+    IdentityFile ~/.ssh/id_ed25519
 
 Host cs
     User akshithg
     HostName vm-ctf5.eecs.oregonstate.edu
-    IdentityFile ~/.ssh/id_cs
 
 Host ivy
     User akshithg
     HostName ivy.unexploitable.systems
-    IdentityFile ~/.ssh/id_cs
 
+Host sally
+    User akshithg
+    HostName sally.unexploitable.systems
+
+Host xps
+    User g
+    HostName xps.lan
