@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+OS=`uname -s`
+
+if [ "$OS" == "Darwin" ]; then
+    USER_CONFIG_PATH="~/Library/ApplicationSupport/VSCodium/User/"
+elif ["$OS" == "Linux"]; then
+    USER_CONFIG_PATH="~/.config/VSCodium/User/"
+fi
+
+ln -nsf "$($USER_CONFIG_PATH)keybindings.json" ~/.code/keybindings.json
+ln -nsf "$($USER_CONFIG_PATH)settings.json" ~/.code/settings.json

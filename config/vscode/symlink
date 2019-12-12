@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-OS=`uname -s`
-
-if [ "$OS" == "Darwin" ]; then
-    ln -nsf ~/Library/Application\ Support/Code/User/keybindings.json ~/.vscode/keybindings.json
-    ln -nsf ~/Library/Application\ Support/Code/User/settings.json ~/.vscode/settings.json
-fi
