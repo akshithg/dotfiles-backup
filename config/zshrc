@@ -69,3 +69,9 @@ elif command -v fortune &>/dev/null ; then
     fortune
 fi
 #####
+
+##### the fuck
+if command -v thefuck &>/dev/null ; then
+    eval $(thefuck --alias)
+fi
+#####
