@@ -10,9 +10,15 @@
 [submodule "plugins/diff-so-fancy"]
 	path = plugins/diff-so-fancy
     url = https://github.com/so-fancy/diff-so-fancy
-[submodule "themes/dracula-theme"]
-	path = themes/dracula-theme
-	url = https://github.com/dracula/dracula-theme/
 [submodule "plugins/pwndbg"]
 	path = plugins/pwndbg
 	url = https://github.com/pwndbg/pwndbg
+[submodule "themes/gnome-terminal"]
+	path = themes/gnome-terminal
+	url = https://github.com/dracula/gnome-terminal
+[submodule "themes/tilix"]
+	path = themes/tilix
+	url = https://github.com/dracula/tilix.git
+[submodule "themes/iterm"]
+	path = themes/iterm
+	url = https://github.com/dracula/iterm.git
