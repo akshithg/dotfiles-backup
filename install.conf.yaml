@@ -6,8 +6,7 @@
 
 # install packages before config
 - shell:
-    # - [git submodule update --init --recursive, Installing submodules]
-    - [git submodule update --init, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
     -
       command: ./packages/install.sh
       description: Installing software packages
@@ -30,21 +29,14 @@
     ~/.gdbinit: config/gdbinit
     ~/.gitconfig: config/git/gitconfig
     ~/.gitignore_global: config/git/gitignore_global
-    ~/.ngrok2:
-        path: config/ngrok2
-        force: false
     ~/.source: config/source
     ~/.ssh:
         path: config/ssh
         force: false
     ~/.tmux.conf: config/tmux.conf
-    ~/.vim_runtime: plugins/vimrc
-    ~/.vscode: config/vscode
     ~/.zplug: plugins/zplug
     ~/.zshrc: config/zshrc
 
 - shell:
-    - [sh ~/.vscode/symlink, Setting up vscode settings]
-    - [sh ~/.vim_runtime/install_awesome_vimrc.sh, Setting up awesome_vimrc]
     - [if ! zsh -ic "zplug check"; then zsh -ic 'zplug install'; exit 0; fi, Installing zsh plugins]
       # exit 0 cuz https://github.com/zplug/zplug/issues/272

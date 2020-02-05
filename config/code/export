@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ -f ./extensions.txt ]
-then
-    mv -f ./extensions.txt ./extensions.txt.old
-fi
-
-code --list-extensions > ./extensions.txt
