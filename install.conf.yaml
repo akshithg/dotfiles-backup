@@ -34,6 +34,7 @@
         path: config/ssh
         force: false
     ~/.tmux.conf: config/tmux.conf
+    ~/.config/nvim: config/nvim
     ~/.zplug: plugins/zplug
     ~/.zshrc: config/zshrc
 

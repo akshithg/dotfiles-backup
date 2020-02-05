@@ -25,6 +25,7 @@ sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     htop \
     iproute2 \
     locales \
+    neovim \
     pkg-config \
     python3 \
     python3-dev \
@@ -33,9 +34,9 @@ sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     python3-wheel \
     ssh \
     sudo \
+    tilix \
     tmux \
     tree \
-    vim \
     unzip \
     wget \
     zsh && \
