@@ -7,6 +7,13 @@ alias grep="grep --color=always"
 alias less="less -R"
 alias    v="vim"
 
+# vscode / codium
+if command -v codium &>/dev/null ; then
+     alias code="codium"
+elif command -v vscode &>/dev/null ; then
+     alias code="vscode"
+fi
+
 # gdb
 alias gdb="gdb -q"
 

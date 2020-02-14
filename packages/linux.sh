@@ -34,6 +34,7 @@ sudo apt-get -q update && sudo apt-get install --no-install-recommends -y \
     python3-wheel \
     ssh \
     sudo \
+    texlive-full \
     tilix \
     tmux \
     tree \
