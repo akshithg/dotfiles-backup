@@ -8,34 +8,13 @@ tap 'homebrew/core'
 tap 'homebrew/livecheck'
 tap 'homebrew/services'
 
-brew 'coreutils' #gnu
-brew 'doctl'
-brew 'ed' #gnu
-brew 'findutils' #gnu
-brew 'gawk' #gnu
 brew 'git'
 brew 'git-extras'
-brew 'git-flow'
-brew 'git-lfs'
-brew 'gnu-sed' #gnu
-brew 'gnu-tar' #gnu
-brew 'go'
-brew 'grep' #gnu
-brew 'htop'
-brew 'hugo'
-brew 'iproute2mac'
-brew 'make' #gnu
 brew 'neovim'
-brew 'openvpn'
-brew 'pkg-config'
-brew 'python'
+brew python
 brew 'tmux'
 brew 'tree'
-brew 'wget'
-brew 'zsh'
 
-cask 'balenaetcher'
-cask 'binary-ninja'
 cask 'chromium'
 cask 'discord'
 cask 'docker'
@@ -43,19 +22,11 @@ cask 'firefox'
 cask 'google-backup-and-sync'
 cask 'google-drive-file-stream'
 cask 'iterm2'
-cask 'java'
-cask 'kitematic'
 cask 'keybase'
-cask 'mactex'
-cask 'notion'
-cask 'postman'
-cask 'signal'
 cask 'skype'
 cask 'slack'
 cask 'spotify'
 cask 'the-unarchiver'
 cask 'trezor-bridge'
 cask 'vscodium'
-cask 'webtorrent'
 cask 'whatsapp'
-cask 'wireshark'

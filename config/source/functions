@@ -1,11 +1,12 @@
+# custom functions for web
 # encode space
 _es () {
     echo "$@" | sed -e "s@ @%20@g"
 }
 
 _pr () {
-    echo $1
-    open $1
+    echo $@
+    open $@
 }
 
 # asm
@@ -33,14 +34,8 @@ es () {
 }
 
 # google
-g () {
+go () {
     url="https://www.google.com/search?q=`_es $@`"
-    _pr $url
-}
-
-# github
-gh () {
-    url="https://github.com/`_es $@`"
     _pr $url
 }
 

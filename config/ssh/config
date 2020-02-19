@@ -1,20 +1,22 @@
-Host desk
-    User g
-    HostName desk.local
-    IdentityFile ~/.ssh/id_desk
+#
+# local
+#
 
-Host deskng
+Host xps
     User g
-    HostName tcp://0.tcp.ngrok.io
-    IdentityFile ~/.ssh/id_desk
+    HostName xps.local
+
+Host retropi
+    User pi
+    Hostname retropie.local
+
+#
+# remote
+#
 
 Host github.com
     User akshithg
-    IdentityFile ~/.ssh/id_ed25519
-
-Host cs
-    User akshithg
-    HostName vm-ctf5.eecs.oregonstate.edu
+    HostName github.com
 
 Host ivy
     User akshithg
@@ -24,6 +26,10 @@ Host sally
     User akshithg
     HostName sally.unexploitable.systems
 
-Host xps
+Host marcie
     User g
-    HostName xps.lan
+    Hostname marcie.unexploitable.systems
+
+Host ctf
+    User g_r00t
+    Hostname ctf-host.osusec.org

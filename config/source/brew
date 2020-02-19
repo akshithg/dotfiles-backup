@@ -1,5 +1,0 @@
-# gnu tools on mac
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-fi

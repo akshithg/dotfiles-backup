@@ -1,10 +1,6 @@
-# start ssh-agent if it's not already up
+# start ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent`
 fi
-
-# add
-ls ~/.ssh/id_* | grep -v ".pub" | xargs ssh-add &>/dev/null
-
-# add connect to path
-PATH=~/.ssh/connect:$PATH
+# add keys to agent
+ls ~/.ssh/id_* | grep -v ".pub" | xargs -r ssh-add &>/dev/null

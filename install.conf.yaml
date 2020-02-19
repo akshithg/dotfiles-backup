@@ -1,43 +1,54 @@
 - defaults:
     link:
         force: true
+        create: true
 
 - clean: ['~']
 
 # install packages before config
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    -
-      command: ./packages/install.sh
-      description: Installing software packages
-      quiet: false
-      stdin: true
-      stdout: true
-      stderr: true
-    -
-      command: pip3 install -r ./packages/pipfile
-      description: Installing python global modules
-      quiet: false
-    - [mkdir -p ~/bin, Creating ~/bin]
+    - [git submodule update --init --rebase --remote, Installing submodules/plugins]
+    # -
+    #   command: ./packages/install.sh
+    #   description: Installing software packages
+    #   quiet: false
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
     - [mkdir -p ~/workspace, Creating ~/workspace]
 
 # symlink config files
 - link:
-    ~/bin/diff-so-fancy:
-        path: plugins/diff-so-fancy/diff-so-fancy
-        create: true
-    ~/.gdbinit: config/gdbinit
+    ~/.code: config/code
+    # gdb
+    ~/.gdbinit:
+        path: config/gdbinit
+        if: '[ $commands[gdb] ]'
+    # haskell
+    ~/.ghci:
+        path: config/ghci
+        if: '[ $commands[ghci] ]'
+    # git
+    ~/bin/diff-so-fancy: plugins/diff-so-fancy/diff-so-fancy
     ~/.gitconfig: config/git/gitconfig
     ~/.gitignore_global: config/git/gitignore_global
+    # source: alias, paths, commands etc..
     ~/.source: config/source
     ~/.ssh:
         path: config/ssh
         force: false
-    ~/.tmux.conf: config/tmux.conf
-    ~/.config/nvim: config/nvim
-    ~/.zplug: plugins/zplug
+    #tmux
+    ~/.tmux.conf:
+        path: config/tmux.conf
+        if: '[ $commands[tmux] ]'
+    ~/.tmux/plugins/tpm:
+        path: plugins/tpm
+        if: '[ $commands[tmux] ]'
+    # vim
+    ~/.vimrc: config/vimrc
+    ~/.local/share/nvim/site/autoload/plug.vim: plugins/vim-plug/plug.vim
+    ~/.vim/autoload/vim.plug: plugins/vim-plug/plug.vim
+    # zsh
+    ~/.p10k.zsh: config/p10k.zsh
+    ~/.zinit: plugins/zinit
     ~/.zshrc: config/zshrc
-
-- shell:
-    - [if ! zsh -ic "zplug check"; then zsh -ic 'zplug install'; exit 0; fi, Installing zsh plugins]
-      # exit 0 cuz https://github.com/zplug/zplug/issues/272

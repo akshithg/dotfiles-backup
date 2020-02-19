@@ -1,0 +1,8 @@
+activate() {
+	venvactivate=.env/bin/activate
+	if [ -f $venvactivate ]; then
+		source $venvactivate
+	else
+		echo "Error: no file $venvactivate"
+	fi
+}

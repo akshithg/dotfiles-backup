@@ -1,0 +1,14 @@
+if [ $commands[nvim] ]; then
+    alias vim="nvim"
+    alias vi="nvim"
+fi
+
+
+function chpwd {
+    if [ -d "venv" ] && [ -z "$VIRTUAL_ENV" ]; then
+        source venv/bin/activate
+    fi
+    if [ ! -d "venv" ] && [ ! -z "$VIRTUAL_ENV" ]; then
+        deactivate
+    fi
+}

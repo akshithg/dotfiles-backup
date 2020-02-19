@@ -1,15 +1,15 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "plugins/zplug"]
-	path = plugins/zplug
-	url = https://github.com/zplug/zplug
+	branch = master
 [submodule "plugins/diff-so-fancy"]
 	path = plugins/diff-so-fancy
-    url = https://github.com/so-fancy/diff-so-fancy
+	url = https://github.com/so-fancy/diff-so-fancy
+	branch = master
 [submodule "plugins/pwndbg"]
 	path = plugins/pwndbg
 	url = https://github.com/pwndbg/pwndbg
+	branch = stable
 [submodule "themes/gnome-terminal"]
 	path = themes/gnome-terminal
 	url = https://github.com/dracula/gnome-terminal
@@ -19,3 +19,19 @@
 [submodule "themes/iterm"]
 	path = themes/iterm
 	url = https://github.com/dracula/iterm.git
+[submodule "plugins/zinit/bin"]
+	path = plugins/zinit/bin
+	url = https://github.com/zdharma/zinit.git
+	branch = master
+[submodule "plugins/tpm"]
+	path = plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+	branch = master
+[submodule "plugins/vim-plug"]
+	path = plugins/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
+	branch = master
+[submodule "themes/colorls"]
+	path = themes/colorls
+	url = https://github.com/dracula/colorls.git
+	branch = master

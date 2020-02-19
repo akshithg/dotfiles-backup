@@ -1,77 +1,137 @@
-##### language configuration
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LANGUAGE=en_US:en
-#####
+# If not running interactively, don't do anything
+[[ -o interactive ]] || return
 
-##### options
-setopt complete_aliases
-setopt auto_menu
-#####
-
-##### plugins
-# https://github.com/zplug/zplug
-export ZPLUG_HOME=~/.zplug
-source $ZPLUG_HOME/init.zsh
-
-zplug "modules/tmux",       from:prezto
-zplug "modules/history",    from:prezto
-zplug "modules/utility",    from:prezto
-zplug "modules/ssh",        from:prezto
-zplug "modules/terminal",   from:prezto
-zplug "modules/directory",  from:prezto
-zplug "modules/completion", from:prezto
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-apple-touchbar", if:"[[ $OSTYPE == *darwin* ]]"
-zplug "b4b4r07/enhancd", use:"init.sh"
-zplug "mafredri/zsh-async", use:"async.zsh" defer:0
-#zplug "sindresorhus/pure", use:"pure.zsh", as:theme
-zplug "dracula/zsh", as:theme
-autoload -U compinit && compinit
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
-
-if ! zplug check; then
-    printf "Install zplug plugins? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-zplug load
 
-if zplug check zsh-users/zsh-history-substring-search; then
-    bindkey '^[[A' history-substring-search-up
-    bindkey '^[[B' history-substring-search-down
+#
+# zinit
+#
+autoload -U is-at-least
+if is-at-least 5.1 && [ -d ~/.zinit ]; then
+
+    source ~/.zinit/bin/zinit.zsh
+    autoload -Uz _zinit
+  (( ${+_comps} )) && _comps[zinit]=_zinit
+
+  zplugin ice depth=1
+  zplugin light romkatv/powerlevel10k
+
+  # Show autosuggestions
+  ZSH_AUTOSUGGEST_USE_ASYNC=1
+  if is-at-least 5.3; then
+    zinit ice silent wait'1' atload'_zsh_autosuggest_start'
+  fi
+  zinit light zsh-users/zsh-autosuggestions
+
+  # Easily access the directories you visit most often.
+  #
+  # Usage:
+  #   $ z workspace
+  #   $ <CTRL-G>worksapce
+  zinit light agkozak/zsh-z
+  zinit light andrewferrier/fzf-z
+  export FZFZ_SUBDIR_LIMIT=0
+
+  # Automatically expand all aliases
+  ZSH_EXPAND_ALL_DISABLE=word
+  zinit light simnalamburt/zsh-expand-all
+
+  # Others
+  zinit light simnalamburt/cgitc
+  zinit light simnalamburt/ctrlf
+  zinit light zdharma/fast-syntax-highlighting
+  zinit light zsh-users/zsh-history-substring-search
+  zinit light zsh-users/zsh-completions
+
+  autoload -Uz compinit
+  compinit
+  zinit cdreplay
+
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
+else
+  # Default terminal
+  case "$TERM" in
+    xterm-color|*-256color)
+      PS1=$'\e[1;32m%n@%m\e[0m:\e[1;34m%~\e[0m%(!.#.$) ';;
+    *)
+      PS1='%n@%m:%~%(!.#.$) ';;
+  esac
+
+  autoload -Uz compinit
+  compinit
 fi
-unsetopt auto_cd
-#####
 
-##### source
-if [[ -d ~/.source ]] then
-    for file in ~/.source/**/*(.); source $file;
+
+#
+# powerlevel10k. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+#
+[ ! -f ~/.p10k.zsh ] || source ~/.p10k.zsh
+# Show me exit codes
+typeset -g POWERLEVEL9K_STATUS_ERROR=true
+# Less distractive colorscheme
+typeset -g POWERLEVEL9K_TIME_FOREGROUND=242
+# Magenta prompt symbol if the last command succeeded.
+typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND='#FF6AC1'
+# Red prompt symbol if the last command failed.
+typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND='#FF5C57'
+
+#
+# zsh-sensible
+#
+alias l='ls -lah'
+alias mv='mv -i'
+alias cp='cp -i'
+
+#
+# zsh options http://zsh.sourceforge.net/Doc/Release/Options.html
+#
+setopt auto_cd auto_menu complete_aliases histignorealldups sharehistory
+zstyle ':completion:*' menu select
+
+HISTSIZE=90000
+SAVEHIST=90000
+HISTFILE=~/.zsh_history
+
+
+#
+# lscolors
+#
+autoload -U colors && colors
+export LSCOLORS="Gxfxcxdxbxegedxbagxcad"
+export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=0;41:sg=30;46:tw=0;42:ow=30;43"
+export TIME_STYLE='long-iso'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+
+#
+# zsh-substring-completion
+#
+setopt complete_in_word
+setopt always_to_end
+WORDCHARS=''
+zmodload -i zsh/complist
+# Substring completion
+zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+
+#
+# source
+#
+if [ -d ~/.source ]; then
+    for file in ~/.source/* ; source $file
 fi
-#####
 
-##### tmux on ssh
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux \; split-window -h \;
+
+#
+# Load local configs
+#
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
-#####
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-##### greeting
-if command -v neofetch &>/dev/null ; then
-    neofetch
-elif command -v fortune &>/dev/null ; then
-    fortune
-fi
-#####
-
-##### the fuck
-if command -v thefuck &>/dev/null ; then
-    eval $(thefuck --alias)
-fi
-#####

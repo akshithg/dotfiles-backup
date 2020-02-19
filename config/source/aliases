@@ -1,41 +1,19 @@
-# basic
-alias  ...="cd  ~/.dotfiles"
-alias   me="echo `whoami`@`hostname`"
-alias    c="clear"
-alias    q="exit"
-alias grep="grep --color=always"
-alias less="less -R"
-alias    v="vim"
 
-# vscode / codium
-if command -v codium &>/dev/null ; then
-     alias code="codium"
-elif command -v vscode &>/dev/null ; then
-     alias code="vscode"
-fi
+alias ...="cd  ~/.dotfiles"
+alias me="echo `whoami`@`hostname`"
+alias c="clear"
+alias q="exit"
+alias less="less -R"
+alias vim="nvim"
+
+# code
+alias code="code --user-data-dir=$HOME/.code";
 
 # gdb
 alias gdb="gdb -q"
 
-# git
-# look in .gitconfig
-
-# ls
-alias ls="ls --color=always"
-alias  l="ls -la"
-alias ll="ls -h"
-
 # open
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-     alias open="xdg-open"
+    alias open="xdg-open"
 fi
 
-# python
-alias python="python3"
-alias    pip="pip3"
-
-# tmux
-alias  t="tmux attach || tmux new-session \; split-window -h \;"
-alias tl="tmux list-sessions"
-alias ta="tmux attach -t"
-alias tn="tmux new-session"

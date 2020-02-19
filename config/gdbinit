@@ -1,1 +1,1 @@
-source ~/.dotfiles/plugins/pwndbg/gdbinit.py
+set auto-load safe-path /
