@@ -21,13 +21,9 @@
 - link:
     ~/.code: config/code
     # gdb
-    ~/.gdbinit:
-        path: config/gdbinit
-        if: '[ $commands[gdb] ]'
+    ~/.gdbinit: config/gdbinit
     # haskell
-    ~/.ghci:
-        path: config/ghci
-        if: '[ $commands[ghci] ]'
+    ~/.ghci: config/ghci
     # git
     ~/bin/diff-so-fancy: plugins/diff-so-fancy/diff-so-fancy
     ~/.gitconfig: config/git/gitconfig
@@ -38,12 +34,8 @@
         path: config/ssh
         force: false
     #tmux
-    ~/.tmux.conf:
-        path: config/tmux.conf
-        if: '[ $commands[tmux] ]'
-    ~/.tmux/plugins/tpm:
-        path: plugins/tpm
-        if: '[ $commands[tmux] ]'
+    ~/.tmux.conf: config/tmux.conf
+    ~/.tmux/plugins/tpm: plugins/tpm
     # vim
     ~/.vimrc: config/vimrc
     ~/.local/share/nvim/site/autoload/plug.vim: plugins/vim-plug/plug.vim

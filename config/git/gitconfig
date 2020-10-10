@@ -31,6 +31,11 @@
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
 
+[color]
+	ui = auto
+	branch = auto
+	status = auto
+
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = ~/.gitignore_global

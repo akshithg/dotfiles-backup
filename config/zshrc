@@ -117,8 +117,13 @@ setopt complete_in_word
 setopt always_to_end
 WORDCHARS=''
 zmodload -i zsh/complist
+
 # Substring completion
-zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# '' - complete the current word exactly
+# 'm:{a-zA-Z}={A-Za-z}' - handle upper and lower case interchangeable
+# 'r:|[._-]=* r:|=*' -  partial completion before . or _ or -
+# 'l:|=* r:|=*' - complete on the left side of the written text, e.g. bar -> foobar
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 
 #
