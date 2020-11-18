@@ -11,7 +11,7 @@ tap 'homebrew/services'
 brew 'git'
 brew 'git-extras'
 brew 'neovim'
-brew python
+brew 'python'
 brew 'tmux'
 brew 'tree'
 

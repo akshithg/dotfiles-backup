@@ -5,10 +5,7 @@ fi
 
 
 function chpwd {
-    if [ -d "venv" ] && [ -z "$VIRTUAL_ENV" ]; then
-        source venv/bin/activate
-    fi
-    if [ ! -d "venv" ] && [ ! -z "$VIRTUAL_ENV" ]; then
-        deactivate
+    if [ -d ".env" ] && [ -z "$VIRTUAL_ENV" ]; then
+        source .env/bin/activate
     fi
 }

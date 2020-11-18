@@ -4,10 +4,8 @@ alias me="echo `whoami`@`hostname`"
 alias c="clear"
 alias q="exit"
 alias less="less -R"
+alias sl=ls
 alias vim="nvim"
-
-# code
-alias code="code --user-data-dir=$HOME/.code";
 
 # gdb
 alias gdb="gdb -q"
@@ -17,3 +15,5 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias open="xdg-open"
 fi
 
+# exa - replacement for ls ( https://github.com/ogham/exa )
+alias ls="exa"

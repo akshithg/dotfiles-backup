@@ -7,6 +7,7 @@ pHeader "Setting up Linux"
 # Linux-only stuff. Abort if not Linux.
 if [[ $(uname -s) != "Linux" ]]; then
     pBad "Not Linux. Exiting."
+    exit
 fi
 
 # install packages

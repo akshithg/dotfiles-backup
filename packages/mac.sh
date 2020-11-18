@@ -7,6 +7,7 @@ pHeader "Setting up MacOS"
 # MacOS-only stuff. Abort if not MacOS.
 if [[ $(uname -s) != "Darwin" ]]; then
     pBad "Not MacOS. Exiting."
+    exit
 fi
 
 # install homebrew

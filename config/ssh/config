@@ -33,3 +33,16 @@ Host marcie
 Host ctf
     User g_r00t
     Hostname ctf-host.osusec.org
+
+#
+# osu
+#
+
+Host osucpu
+    User gunaseka
+    Hostname babylon.eecs.oregonstate.edu
+
+Host osugpu
+    User gunaseka
+    Hostname pelican.eecs.oregonstate.edu
+

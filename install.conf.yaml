@@ -19,7 +19,6 @@
 
 # symlink config files
 - link:
-    ~/.code: config/code
     # gdb
     ~/.gdbinit: config/gdbinit
     # haskell

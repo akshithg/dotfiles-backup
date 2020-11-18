@@ -54,10 +54,10 @@ if is-at-least 5.1 && [ -d ~/.zinit ]; then
   zinit cdreplay
 
   # use one of these key bindings depending on what works
-  bindkey "$terminfo[kcuu1]" history-substring-search-up
-  bindkey "$terminfo[kcud1]" history-substring-search-down
-  #bindkey '^[[A' history-substring-search-up
-  #bindkey '^[[B' history-substring-search-down
+  #bindkey "$terminfo[kcuu1]" history-substring-search-up
+  #bindkey "$terminfo[kcud1]" history-substring-search-down
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
 else
   # Default terminal
   case "$TERM" in
