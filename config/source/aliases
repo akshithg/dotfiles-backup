@@ -15,5 +15,3 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias open="xdg-open"
 fi
 
-# exa - replacement for ls ( https://github.com/ogham/exa )
-alias ls="exa"
