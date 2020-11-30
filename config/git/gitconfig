@@ -59,3 +59,5 @@
 [user]
     name = Akshith Gunasekaran
     email = akshith.573@gmail.com
+[pull]
+	ff = only
