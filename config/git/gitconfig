@@ -61,3 +61,5 @@
     email = akshith.573@gmail.com
 [pull]
 	ff = only
+[init]
+	defaultBranch = main

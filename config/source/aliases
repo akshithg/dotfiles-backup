@@ -7,6 +7,14 @@ alias less="less -R"
 alias sl=ls
 alias vim="nvim"
 
+
+# ls
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+
 # gdb
 alias gdb="gdb -q"
 

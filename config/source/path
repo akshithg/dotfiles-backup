@@ -40,6 +40,10 @@ checknappend2path ~/go/bin
 # haskell
 checknappend2path ~/.cabal/bin
 
+# npm n
+export N_PREFIX="$HOME/n"
+checknappend2path ~/n/bin
+
 # ruby / rvm
 checknappend2path /usr/local/opt/ruby/bin
 checknappend2path ~/.rvm/bin
