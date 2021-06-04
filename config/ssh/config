@@ -30,6 +30,10 @@ Host marcie
     User g
     Hostname marcie.unexploitable.systems
 
+Host owyhee
+    User gunaseka
+    Hostname fw-owyhee.eecs.oregonstate.edu
+
 Host ctf
     User g_r00t
     Hostname ctf-host.osusec.org
