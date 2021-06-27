@@ -40,4 +40,5 @@ ENV USER g
 # install dotfiles
 RUN ./install
 
+WORKDIR /home/g
 CMD ["/usr/bin/zsh"]
