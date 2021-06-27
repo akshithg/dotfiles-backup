@@ -1,36 +1,43 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
-RUN apt-get -q update && \
+# packages
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get update && \
     apt-get install --no-install-recommends -y \
-        build-essential \
-        gawk \
-        g++ gcc \
         git \
-        iproute2 \
-        locales \
+        git-extras \
+        htop \
+        neovim \
         python3 \
         python3-pip \
         python3-dev \
         ssh \
         sudo \
         tmux \
-        vim \
+        tree \
         unzip \
         wget \
         zsh && \
-    rm -rf /var/lib/apt/lists/* && \
-    locale-gen en_US.UTF-8
+    rm -rf /var/lib/apt/lists/*
 
-RUN useradd --create-home --shell /usr/bin/zsh g
-RUN echo "g ALL=NOPASSWD: ALL" > /etc/sudoers.d/g
+# non root passwordless user with sudo privileges
+RUN adduser \
+        --disabled-password \
+        --gecos '' \
+        --shell /usr/bin/zsh \
+        g && \
+    echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-COPY .git /home/g/dotfiles/.git
-RUN chown -R g.g /home/g/dotfiles
+# copy dotfiles
+WORKDIR /home/g/.dotfiles
+COPY . ./
+RUN chown -R g:g ./
 
+# swtich user
 USER g
-WORKDIR /home/g/dotfiles
-RUN git checkout . && \
-    ./install
+ENV USER g
 
-WORKDIR /home/g
-CMD ["zsh"]
+# install dotfiles
+RUN ./install
+
+CMD ["/usr/bin/zsh"]

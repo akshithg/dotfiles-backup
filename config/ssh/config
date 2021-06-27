@@ -14,6 +14,10 @@ Host retropi
 # remote
 #
 
+Host ctf
+    User g_r00t
+    Hostname ctf-host.osusec.org
+
 Host github.com
     User akshithg
     HostName github.com
@@ -21,10 +25,6 @@ Host github.com
 Host ivy
     User akshithg
     HostName ivy.unexploitable.systems
-
-Host sally
-    User akshithg
-    HostName sally.unexploitable.systems
 
 Host marcie
     User g
@@ -34,19 +34,15 @@ Host owyhee
     User gunaseka
     Hostname fw-owyhee.eecs.oregonstate.edu
 
-Host ctf
-    User g_r00t
-    Hostname ctf-host.osusec.org
+Host sally
+    User akshithg
+    HostName sally.unexploitable.systems
+
 
 #
-# osu
+# parc
 #
 
-Host osucpu
-    User gunaseka
-    Hostname babylon.eecs.oregonstate.edu
-
-Host osugpu
-    User gunaseka
-    Hostname pelican.eecs.oregonstate.edu
-
+Host parc
+    User agunasekar
+    Hostname sshgate.parc.com
