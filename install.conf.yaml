@@ -7,7 +7,7 @@
 
 # install packages before config
 - shell:
-    - [git submodule update --init --rebase --remote, Installing submodules/plugins]
+    - [git submodule update --init --recursive, Installing submodules/plugins]
     # -
     #   command: ./packages/install.sh
     #   description: Installing software packages
