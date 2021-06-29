@@ -26,6 +26,7 @@ RUN adduser \
         --gecos '' \
         --shell /usr/bin/zsh \
         g && \
+    adduser g sudo && \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # copy dotfiles
