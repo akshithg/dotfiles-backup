@@ -29,16 +29,11 @@ RUN adduser \
     adduser g sudo && \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# copy dotfiles
-WORKDIR /home/g/.dotfiles
-COPY . ./
-RUN chown -R g:g ./
-
-# swtich user
+# get dotfiles and install
 USER g
-ENV USER g
-
-# install dotfiles
+WORKDIR /home/g
+RUN git clone https://github.com/akshithg/dotfiles .dotfiles
+WORKDIR /home/g/.dotfiles
 RUN ./install
 
 WORKDIR /home/g
