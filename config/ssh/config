@@ -10,6 +10,10 @@ Host retropi
     User pi
     Hostname retropie.local
 
+Host parc
+    User agunasekar
+    Hostname gladstone.local
+
 #
 # remote
 #
@@ -43,6 +47,6 @@ Host sally
 # parc
 #
 
-Host parc
+Host parc-proxy
     User agunasekar
     Hostname sshgate.parc.com

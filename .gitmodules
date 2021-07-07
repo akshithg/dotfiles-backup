@@ -35,3 +35,6 @@
 	path = themes/colorls
 	url = https://github.com/dracula/colorls.git
 	branch = master
+[submodule "themes/terminal-app"]
+	path = themes/terminal-app
+	url = https://github.com/dracula/terminal-app.git
