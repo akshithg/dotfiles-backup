@@ -39,8 +39,8 @@ if is-at-least 5.1 && [ -d ~/.zinit ]; then
   export FZFZ_SUBDIR_LIMIT=0
 
   # Automatically expand all aliases
-  ZSH_EXPAND_ALL_DISABLE=word
-  zinit light simnalamburt/zsh-expand-all
+  # ZSH_EXPAND_ALL_DISABLE=word
+  # zinit light simnalamburt/zsh-expand-all
 
   # Others
   zinit light simnalamburt/cgitc
@@ -143,3 +143,4 @@ fi
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
+

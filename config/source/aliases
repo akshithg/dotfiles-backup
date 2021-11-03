@@ -4,16 +4,20 @@ alias me="echo `whoami`@`hostname`"
 alias c="clear"
 alias q="exit"
 alias less="less -R"
-alias sl=ls
 alias vim="nvim"
 
 
+# disk space
+alias du="du -h -d1"
+
+
 # ls
-alias l='ls -l'
+alias l='ls'
+alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-
+alias sl='ls'
 
 # gdb
 alias gdb="gdb -q"

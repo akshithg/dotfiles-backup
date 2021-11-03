@@ -1,30 +1,23 @@
-#
-# local
-#
+Host *
+    IdentityFile ~/.ssh/id_ed25519
 
-Host xps
-    User g
-    HostName xps.local
 
-Host retropi
-    User pi
-    Hostname retropie.local
+Host github.com
+    User akshithg
+    HostName github.com
 
-Host parc
-    User agunasekar
-    Hostname gladstone.local
 
-#
-# remote
-#
+########################################
+# osu
+########################################
 
 Host ctf
     User g_r00t
     Hostname ctf-host.osusec.org
 
-Host github.com
-    User akshithg
-    HostName github.com
+Host flip
+    User gunaseka
+    HostName access.engr.oregonstate.edu
 
 Host ivy
     User akshithg
@@ -41,12 +34,3 @@ Host owyhee
 Host sally
     User akshithg
     HostName sally.unexploitable.systems
-
-
-#
-# parc
-#
-
-Host parc-proxy
-    User agunasekar
-    Hostname sshgate.parc.com
