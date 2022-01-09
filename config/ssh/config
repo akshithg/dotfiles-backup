@@ -1,23 +1,36 @@
 Host *
     IdentityFile ~/.ssh/id_ed25519
 
-
 Host github.com
     User akshithg
     HostName github.com
-
 
 ########################################
 # osu
 ########################################
 
+Host osu-jump
+    User gunaseka
+    HostName access.engr.oregonstate.edu
+
+Host osu-cpu
+    User gunaseka
+    HostName babylon.eecs.oregonstate.edu
+    ProxyJump osu-jump
+
+Host osu-gpu
+    User gunaseka
+    HostName pelican.eecs.oregonstate.edu
+    ProxyJump osu-jump
+
+Host osu-hpc
+    User gunaseka
+    HostName submit.hpc.engr.oregonstate.edu
+    ProxyJump osu-jump
+
 Host ctf
     User g_r00t
     Hostname ctf-host.osusec.org
-
-Host flip
-    User gunaseka
-    HostName access.engr.oregonstate.edu
 
 Host ivy
     User akshithg
@@ -30,6 +43,7 @@ Host marcie
 Host owyhee
     User gunaseka
     Hostname fw-owyhee.eecs.oregonstate.edu
+    RequestTTY yes
 
 Host sally
     User akshithg
