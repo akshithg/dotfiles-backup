@@ -1,40 +1,40 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = git@github.com:anishathalye/dotbot
 	branch = master
 [submodule "plugins/diff-so-fancy"]
 	path = plugins/diff-so-fancy
-	url = https://github.com/so-fancy/diff-so-fancy
+	url = git@github.com:so-fancy/diff-so-fancy
 	branch = master
 [submodule "plugins/pwndbg"]
 	path = plugins/pwndbg
-	url = https://github.com/pwndbg/pwndbg
+	url = git@github.com:pwndbg/pwndbg
 	branch = stable
 [submodule "themes/gnome-terminal"]
 	path = themes/gnome-terminal
-	url = https://github.com/dracula/gnome-terminal
+	url = git@github.com:dracula/gnome-terminal
 [submodule "themes/tilix"]
 	path = themes/tilix
-	url = https://github.com/dracula/tilix.git
+	url = git@github.com:dracula/tilix.git
 [submodule "themes/iterm"]
 	path = themes/iterm
-	url = https://github.com/dracula/iterm.git
+	url = git@github.com:dracula/iterm.git
 [submodule "plugins/zinit/bin"]
 	path = plugins/zinit/bin
-	url = https://github.com/zdharma/zinit.git
+	url = git@github.com:zdharma-continuum/zinit.git
 	branch = master
 [submodule "plugins/tpm"]
 	path = plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+	url = git@github.com:tmux-plugins/tpm
 	branch = master
 [submodule "plugins/vim-plug"]
 	path = plugins/vim-plug
-	url = https://github.com/junegunn/vim-plug.git
+	url = git@github.com:junegunn/vim-plug.git
 	branch = master
 [submodule "themes/colorls"]
 	path = themes/colorls
-	url = https://github.com/dracula/colorls.git
+	url = git@github.com:dracula/colorls.git
 	branch = master
 [submodule "themes/terminal-app"]
 	path = themes/terminal-app
-	url = https://github.com/dracula/terminal-app.git
+	url = git@github.com:dracula/terminal-app.git
