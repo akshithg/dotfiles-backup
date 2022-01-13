@@ -26,6 +26,7 @@ Host osu-gpu
 Host osu-hpc
     User gunaseka
     HostName submit.hpc.engr.oregonstate.edu
+    UserKnownHostsFile /dev/null
     ProxyJump osu-jump
 
 Host ctf
@@ -43,6 +44,8 @@ Host marcie
 Host owyhee
     User gunaseka
     Hostname fw-owyhee.eecs.oregonstate.edu
+    ProxyJump osu-jump
+    UserKnownHostsFile /dev/null
     RequestTTY yes
 
 Host sally
