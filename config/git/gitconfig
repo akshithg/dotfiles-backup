@@ -32,9 +32,24 @@
     la = "!git config -l | grep alias | cut -c 7-"
 
 [color]
-	ui = auto
+	ui = true
 	branch = auto
 	status = auto
+
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
+
+[color "diff"]
+        meta = 11
+        frag = magenta bold
+        func = 146 bold
+        commit = yellow bold
+        old = red bold
+        new = green bold
+	whitespace = red reverse
 
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFX
@@ -46,6 +61,9 @@
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
+
+[init]
+	defaultBranch = main
 
 [url "https://github.com/"]
     insteadOf = gh:
@@ -61,5 +79,3 @@
     email = akshith.573@gmail.com
 [pull]
 	ff = only
-[init]
-	defaultBranch = main
