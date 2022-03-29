@@ -12,6 +12,7 @@ Host github.com
 Host osu-jump
     User gunaseka
     HostName access.engr.oregonstate.edu
+    StrictHostKeyChecking no
 
 Host osu-cpu
     User gunaseka
@@ -28,6 +29,7 @@ Host osu-hpc
     HostName submit.hpc.engr.oregonstate.edu
     UserKnownHostsFile /dev/null
     ProxyJump osu-jump
+    StrictHostKeyChecking no
 
 Host ctf
     User g_r00t
@@ -46,6 +48,7 @@ Host owyhee
     Hostname fw-owyhee.eecs.oregonstate.edu
     ProxyJump osu-jump
     UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
     RequestTTY yes
 
 Host sally
