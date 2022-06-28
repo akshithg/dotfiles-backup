@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-SCRIPTDIR="${0%/*}"
-source  $SCRIPTDIR/../pretty-print
+ROOT=$(git rev-parse --show-toplevel)
+source  $ROOT/config/source/pretty-print
 
 pHeader "Setting up MacOS"
 # MacOS-only stuff. Abort if not MacOS.
@@ -21,7 +21,7 @@ fi
 
 # install all packages from Brewfile
 pStep "Installing formulas in the Brewfile..."
-if brew bundle --file=$SCRIPTDIR/Brewfile; then
+if brew bundle --file=$ROOT/packages/Brewfile; then
     pGood "All formulas were installed"
 else
     pBad "Something went wrong"
@@ -211,15 +211,6 @@ defaults write com.apple.iCal IncludeDebugMenu -bool true
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-
-# Disable the Ping sidebar in iTunes
-defaults write com.apple.iTunes disablePingSidebar -bool true
-
-# Disable all the other Ping stuff in iTunes
-defaults write com.apple.iTunes disablePing -bool true
-
-# Make ⌘ + F focus the search input in iTunes
-defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 # Disable send and reply animations in Mail.app
 defaults write com.apple.Mail DisableReplyAnimations -bool true
