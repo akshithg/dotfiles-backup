@@ -86,16 +86,10 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND='#FF6AC1'
 typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND='#FF5C57'
 
 #
-# zsh-sensible
-#
-alias l='ls -lah'
-alias mv='mv -i'
-alias cp='cp -i'
-
-#
 # zsh options http://zsh.sourceforge.net/Doc/Release/Options.html
 #
-setopt auto_cd auto_menu complete_aliases histignorealldups sharehistory
+# setopt auto_cd
+setopt auto_menu complete_aliases histignorealldups sharehistory
 zstyle ':completion:*' menu select
 
 HISTSIZE=90000
@@ -143,4 +137,3 @@ fi
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
-

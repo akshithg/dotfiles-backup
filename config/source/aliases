@@ -1,15 +1,5 @@
 
 alias ...="cd  ~/.dotfiles"
-alias me="echo `whoami`@`hostname`"
-alias c="clear"
-alias q="exit"
-alias less="less -R"
-alias vim="nvim"
-
-
-# disk space
-alias du="du -h -d1"
-
 
 # ls
 alias l='ls'
@@ -19,11 +9,32 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias sl='ls'
 
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias du='du -h -d1'
+alias grep='grep --color=auto'
+alias less='less -R'
+
+alias me="echo `whoami`@`hostname`"
+alias c="clear"
+alias q="exit"
+
 # gdb
 alias gdb="gdb -q"
+
+# nvim
+if [ $commands[nvim] ]; then
+    alias vim="nvim"
+    alias vi="nvim"
+fi
 
 # open
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias open="xdg-open"
 fi
 
+# weather - https://github.com/chubin/wttr.in
+alias weather="curl wttr.in"
+alias     hot="curl wttr.in"
+alias    cold="curl wttr.in"

@@ -43,7 +43,7 @@ Host marcie
     User g
     Hostname marcie.unexploitable.systems
 
-Host owyhee
+Host kelley
     User gunaseka
     Hostname fw-owyhee.eecs.oregonstate.edu
     ProxyJump osu-jump
