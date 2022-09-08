@@ -126,10 +126,13 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 #
 # source
 #
-if [ -d ~/.source ]; then
-    for file in ~/.source/* ; source $file
+source ~/.source/path
+
+if [ -d ~/.source/apps ]; then
+    for file in ~/.source/apps/* ; source $file
 fi
 
+source ~/.source/alias
 
 #
 # Load local configs

@@ -54,3 +54,7 @@ Host kelley
 Host sally
     User akshithg
     HostName sally.unexploitable.systems
+
+Host sri-ssh
+    User e34420
+    HostName ssh.csl.sri.com
