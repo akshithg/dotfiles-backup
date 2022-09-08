@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-SCRIPTDIR="${0%/*}"
-source $SCRIPTDIR/../pretty-print
+ROOT=$(git rev-parse --show-toplevel)
+source  $ROOT/utils/pretty-print
 
 pHeader "Setting up Linux"
 # Linux-only stuff. Abort if not Linux.

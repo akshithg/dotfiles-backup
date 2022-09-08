@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 ROOT=$(git rev-parse --show-toplevel)
-source  $ROOT/config/source/pretty-print
+source  $ROOT/utils/pretty-print
 
 pHeader "Setting up MacOS"
 # MacOS-only stuff. Abort if not MacOS.
@@ -21,7 +21,7 @@ fi
 
 # install all packages from Brewfile
 pStep "Installing formulas in the Brewfile..."
-if brew bundle --file=$ROOT/packages/Brewfile; then
+if brew bundle --file=$ROOT/system/Brewfile; then
     pGood "All formulas were installed"
 else
     pBad "Something went wrong"
