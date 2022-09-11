@@ -1,24 +1,33 @@
+## All aliases are defined here
 
 alias ...="cd  ~/.dotfiles"
 
-# ls
-alias l='ls'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias sl='ls'
+## NOTE : rust replacements go before basic
+# rust replacements
+if command -v exa &> /dev/null ; then
+    alias ls='exa -F'
+fi
 
+if command -v bat &> /dev/null ; then
+    alias cat='bat'
+fi
+
+
+# basic
+alias c="clear"
 alias cp='cp -i'
-alias mv='mv -i'
-
 alias du='du -h -d1'
 alias grep='grep --color=auto'
+alias l='ls'
+alias la='ls -a'
 alias less='less -R'
-
+alias ll='ls -l'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias me="echo `whoami`@`hostname`"
-alias c="clear"
+alias mv='mv -i'
 alias q="exit"
+alias sl='ls'
 
 # gdb
 if command -v gdb &> /dev/null; then
@@ -47,6 +56,27 @@ if command -v tmux &> /dev/null ; then
     alias txl="tmux list-sessions"
     alias txa="tmux attach -t"
     alias txn="tmux new-session"
+fi
+
+
+## Extra
+
+# readme - glow - https://github.com/charmbracelet/glow
+if command -v glow &> /dev/null ; then
+    def readme() {
+        if [[ -f README.md ]]; then
+            glow README.md
+        elif [[ -f readme.md ]]; then
+            glow readme.md
+        elif [[ -f README ]]; then
+            glow README
+        elif [[ -f readme ]]; then
+            glow readme
+        else
+            glow *.md
+        fi
+    }
+    alias rr="readme"
 fi
 
 # weather - https://github.com/chubin/wttr.in
