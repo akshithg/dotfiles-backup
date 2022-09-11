@@ -6,10 +6,6 @@
 	path = plugins/diff-so-fancy
 	url = git@github.com:so-fancy/diff-so-fancy
 	branch = master
-[submodule "plugins/pwndbg"]
-	path = plugins/pwndbg
-	url = git@github.com:pwndbg/pwndbg
-	branch = stable
 [submodule "themes/gnome-terminal"]
 	path = themes/gnome-terminal
 	url = git@github.com:dracula/gnome-terminal
