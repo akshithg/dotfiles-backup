@@ -28,6 +28,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     #checknappend2path /usr/local/opt/make/libexec/gnubin
 fi
 
+# .local/bin
+checknappend2path ~/.local/bin
+
 # ctf-tools
 checknappend2path ~/tools/ctf-tools/bin
 
