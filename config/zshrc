@@ -1,3 +1,6 @@
+# # profiling, check bottom of the file
+# zmodload zsh/zprof
+
 # If not running interactively, don't do anything
 [[ -o interactive ]] || return
 
@@ -124,3 +127,6 @@ source ~/.source/alias
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
+
+# # profiling, check the top of the file
+# zprof

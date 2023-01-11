@@ -1,0 +1,6 @@
+if [ -d "$HOME/vcpkg" ]; then
+  export VCPKG_ROOT="$HOME/vcpkg"
+  autoload bashcompinit
+  bashcompinit
+  source $HOME/vcpkg/scripts/vcpkg_completion.zsh
+fi

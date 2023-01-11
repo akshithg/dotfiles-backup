@@ -1,0 +1,17 @@
+# readme - glow - https://github.com/charmbracelet/glow
+if command -v glow &> /dev/null ; then
+    def readme() {
+        if [[ -f README.md ]]; then
+            glow README.md
+        elif [[ -f readme.md ]]; then
+            glow readme.md
+        elif [[ -f README ]]; then
+            glow README
+        elif [[ -f readme ]]; then
+            glow readme
+        else
+            glow *.md
+        fi
+    }
+    alias rr="readme"
+fi

@@ -1,0 +1,4 @@
+# weather - https://github.com/chubin/wttr.in
+alias weather="curl wttr.in"
+alias     hot="curl wttr.in"
+alias    cold="curl wttr.in"

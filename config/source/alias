@@ -2,17 +2,6 @@
 
 alias ...="cd  ~/.dotfiles"
 
-## NOTE : rust replacements go before basic
-# rust replacements
-if command -v exa &> /dev/null ; then
-    alias ls='exa -F'
-fi
-
-if command -v bat &> /dev/null ; then
-    alias cat='bat'
-fi
-
-
 # basic
 alias c="clear"
 alias cp='cp -i'
@@ -29,11 +18,6 @@ alias mv='mv -i'
 alias q="exit"
 alias sl='ls'
 
-# gdb
-if command -v gdb &> /dev/null; then
-  alias gdb='gdb -q'
-fi
-
 # nvim
 if command -v nvim &> /dev/null ; then
     alias vim="nvim"
@@ -44,42 +28,3 @@ fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias open="xdg-open"
 fi
-
-# things-cli
-if command -v "things-cli" &> /dev/null ; then
-    alias t="things-cli"
-fi
-
-# tmux alias
-if command -v tmux &> /dev/null ; then
-    alias  tx="tmux attach || tmux new-session \; split-window -h \;"
-    alias txl="tmux list-sessions"
-    alias txa="tmux attach -t"
-    alias txn="tmux new-session"
-fi
-
-
-## Extra
-
-# readme - glow - https://github.com/charmbracelet/glow
-if command -v glow &> /dev/null ; then
-    def readme() {
-        if [[ -f README.md ]]; then
-            glow README.md
-        elif [[ -f readme.md ]]; then
-            glow readme.md
-        elif [[ -f README ]]; then
-            glow README
-        elif [[ -f readme ]]; then
-            glow readme
-        else
-            glow *.md
-        fi
-    }
-    alias rr="readme"
-fi
-
-# weather - https://github.com/chubin/wttr.in
-alias weather="curl wttr.in"
-alias     hot="curl wttr.in"
-alias    cold="curl wttr.in"
