@@ -1,0 +1,6 @@
+alias ls="exa -a"
+alias l="ls"
+alias la="ls"
+alias lh="ls -lh"
+alias ll="ls -l"
+alias sl="ls"

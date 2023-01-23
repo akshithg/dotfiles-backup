@@ -1,36 +1,18 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = git@github.com:anishathalye/dotbot
-	branch = master
-[submodule "plugins/diff-so-fancy"]
-	path = plugins/diff-so-fancy
-	url = git@github.com:so-fancy/diff-so-fancy
-	branch = master
-[submodule "themes/gnome-terminal"]
-	path = themes/gnome-terminal
-	url = git@github.com:dracula/gnome-terminal
-[submodule "themes/tilix"]
-	path = themes/tilix
-	url = git@github.com:dracula/tilix.git
-[submodule "themes/iterm"]
-	path = themes/iterm
-	url = git@github.com:dracula/iterm.git
-[submodule "plugins/zinit/bin"]
-	path = plugins/zinit/bin
+[submodule "_extensions/zinit"]
+	path = _extensions/zinit
 	url = git@github.com:zdharma-continuum/zinit.git
-	branch = master
-[submodule "plugins/tpm"]
-	path = plugins/tpm
-	url = git@github.com:tmux-plugins/tpm
-	branch = master
-[submodule "plugins/vim-plug"]
-	path = plugins/vim-plug
-	url = git@github.com:junegunn/vim-plug.git
-	branch = master
-[submodule "themes/colorls"]
-	path = themes/colorls
-	url = git@github.com:dracula/colorls.git
-	branch = master
-[submodule "themes/terminal-app"]
-	path = themes/terminal-app
+[submodule "_theme/dracula/iterm"]
+	path = _theme/dracula/iterm
+	url = git@github.com:dracula/iterm.git
+[submodule "_theme/dracula/terminal-app"]
+	path = _theme/dracula/terminal-app
 	url = git@github.com:dracula/terminal-app.git
+[submodule "_theme/dracula/xcode"]
+	path = _theme/dracula/xcode
+	url = git@github.com:dracula/xcode.git
+[submodule "_extensions/vim-plug"]
+	path = _extensions/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
+[submodule "_theme/dracula/git"]
+	path = _theme/dracula/git
+	url = git@github.com:dracula/git.git

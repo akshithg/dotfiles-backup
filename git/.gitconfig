@@ -1,0 +1,125 @@
+[alias]
+  a = add
+  ap = add -p
+  c = commit --verbose
+  ca = commit -a --verbose
+  cm = commit -m
+  cam = commit -a -m
+  m = commit --amend --verbose
+  undo-commit = reset --soft HEAD~1
+
+  d = diff --word-diff
+  ds = diff --stat
+  dc = diff --cached
+
+  s = status -s
+  cp = cherry-pick
+  cl = clone
+  co = checkout
+  rao = remote add origin
+  # list branches sorted by last modified
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+  # one-line log
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  le = log --oneline --decorate
+  filelog = log -u
+  # list aliases
+  la = "!git config -l | grep alias | cut -c 7-"
+  root = rev-parse --show-toplevel
+
+# COLORS
+# Dracula Dark Theme
+[color]
+  ui = auto
+[color "branch"]
+  current = cyan bold reverse
+  local = white
+  plain =
+  remote = cyan
+[color "diff"]
+  commit =
+  func = cyan
+  plain =
+  whitespace = magenta reverse
+  meta = white
+  frag = cyan bold reverse
+  old = red
+  new = green
+[color "grep"]
+  context =
+  filename =
+  function =
+  linenumber = white
+  match =
+  selected =
+  separator =
+[color "interactive"]
+  error =
+  header =
+  help =
+  prompt =
+[color "status"]
+  added = green
+  changed = yellow
+  header =
+  localBranch =
+  nobranch =
+  remoteBranch = cyan bold
+  unmerged = magenta bold reverse
+  untracked = red
+  updated = green bold
+
+[core]
+  pager = delta
+  excludesfile = ~/.gitignore_global
+  editor = vim
+
+[diff]
+  colorMoved = default
+
+[delta]
+  light = false
+  line-numbers = true
+  navigate = true       # use n and N to move between diff sections
+  side-by-side = false
+  syntax-theme = Dracula
+
+
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[merge]
+  conflictstyle = diff3
+
+[url "https://github.com/"]
+  insteadOf = gh://
+
+[url "https://gist.github.com/"]
+  insteadOf = gist://
+
+[url "https://bitbucket.org/"]
+  insteadOf = bb://
+
+[url "https://github.com/dracula/"]
+  insteadOf = dracula://
+
+[user]
+  name = ag
+  email = akshith.573@gmail.com
+
+[pull]
+  ff = only

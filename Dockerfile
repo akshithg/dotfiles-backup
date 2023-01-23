@@ -3,21 +3,7 @@ FROM ubuntu:latest
 # packages
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \
-    apt-get install --no-install-recommends -y \
-        git \
-        git-extras \
-        htop \
-        neovim \
-        python3 \
-        python3-pip \
-        python3-dev \
-        ssh \
-        sudo \
-        tmux \
-        tree \
-        unzip \
-        wget \
-        zsh && \
+    apt-get install --no-install-recommends -y stow zsh && \
     rm -rf /var/lib/apt/lists/*
 
 # non root passwordless user with sudo privileges
@@ -29,12 +15,6 @@ RUN adduser \
     adduser g sudo && \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# get dotfiles and install
 USER g
-WORKDIR /home/g
-RUN git clone https://github.com/akshithg/dotfiles .dotfiles
-WORKDIR /home/g/.dotfiles
-RUN ./install
-
 WORKDIR /home/g
 CMD ["/usr/bin/zsh"]

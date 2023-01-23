@@ -1,0 +1,75 @@
+tap "beeftornado/rmtree"
+tap "buo/cask-upgrade"
+tap "homebrew/aliases"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "bat"
+brew "bat-extras"
+brew "cmake"
+brew "deno"
+brew "dust"
+brew "exa"
+brew "fzf"
+brew "git"
+brew "git-delta"
+brew "git-extras"
+brew "glow"
+brew "htop"
+brew "llvm"
+brew "mas"
+brew "neovim"
+brew "pandoc"
+brew "pkg-config"
+brew "pygments"
+brew "python@3.10"
+brew "ripgrep"
+brew "rustup-init"
+brew "stow"
+brew "tmux"
+brew "zsh"
+cask "activitywatch"
+cask "cold-turkey-blocker"
+cask "cron"
+cask "cscreen"
+cask "discord"
+cask "docker"
+cask "drawio"
+cask "firefox"
+cask "font-source-code-pro"
+cask "hiddenbar"
+cask "iterm2"
+cask "logi-options-plus"
+cask "mactex-no-gui"
+cask "miniconda"
+cask "netnewswire"
+cask "notion"
+cask "obsidian"
+cask "raycast"
+cask "shottr"
+cask "slack"
+cask "sonos"
+cask "spotify"
+cask "thingsmacsandboxhelper"
+cask "visual-studio-code"
+cask "whatsapp"
+cask "zoom"
+cask "zotero"
+mas "Minesweeper", id: 1475921958
+mas "Things", id: 904280696
+mas "Asphalt 9", id: 1491129197
+mas "Drafts", id: 1435957248
+mas "Hush", id: 1544743900
+mas "Overlap", id: 1516950324
+mas "Sudoku", id: 1472323223
+mas "Wipr", id: 1320666476
+mas "Dark Reader for Safari", id: 1438243180
+mas "Xcode", id: 497799835
+mas "QuickShade", id: 931571202
+mas "Save to Pocket", id: 1477385213
+mas "Flow", id: 1423210932
+mas "DuckDuckGo Privacy for Safari", id: 1482920575

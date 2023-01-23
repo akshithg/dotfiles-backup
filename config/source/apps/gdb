@@ -1,4 +1,0 @@
-# gdb
-if command -v gdb &> /dev/null; then
-  alias gdb='gdb -q'
-fi

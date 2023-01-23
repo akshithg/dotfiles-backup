@@ -1,0 +1,10 @@
+alias ..="cd .."
+alias ...="cd  ~/.dotfiles"
+
+alias c="clear"
+alias q="exit"
+
+alias cp="cp -i"
+alias mv="mv -i"
+
+alias shr="echo -n '¯\_(ツ)_/¯' | pbcopy"

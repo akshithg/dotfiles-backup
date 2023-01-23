@@ -1,7 +1,0 @@
-# tmux alias
-if command -v tmux &> /dev/null ; then
-    alias  tx="tmux attach || tmux new-session \; split-window -h \;"
-    alias txl="tmux list-sessions"
-    alias txa="tmux attach -t"
-    alias txn="tmux new-session"
-fi

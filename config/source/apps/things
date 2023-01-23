@@ -1,4 +1,0 @@
-# things-cli
-if command -v "things-cli" &> /dev/null ; then
-    alias t="things-cli"
-fi
