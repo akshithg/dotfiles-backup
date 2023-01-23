@@ -1,22 +1,15 @@
 # dotfiles
 
-OS: MacOS
-Shell: zsh
-Applications: neoVim, tmux,
+Uses [stow](https://www.gnu.org/software/stow/) to manage dotfiles.
 
-./install - will install all the required packages and dependencies
+Install packages:
 
-## Uses
+    ./install_packages.sh
 
-- [tpm](https://github.com/tmux-plugins/tpm)
-- [vim-plug](https://github.com/junegunn/vim-plug)
-- [zinit](https://github.com/zdharma-continuum/zinit)
+Install symlinks:
 
-## Setup
+    ./install_symlinks.sh
 
-```sh
-git clone https://github.com/akshithg/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-./install
-./configure
-```
+Uninstall symlinks:
+
+    ./uninstall_symlinks.sh
