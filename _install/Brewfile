@@ -59,17 +59,15 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "zoom"
 cask "zotero"
-mas "Minesweeper", id: 1475921958
-mas "Things", id: 904280696
 mas "Asphalt 9", id: 1491129197
+mas "Dark Reader for Safari", id: 1438243180
 mas "Drafts", id: 1435957248
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "Flow", id: 1423210932
 mas "Hush", id: 1544743900
 mas "Overlap", id: 1516950324
-mas "Sudoku", id: 1472323223
-mas "Wipr", id: 1320666476
-mas "Dark Reader for Safari", id: 1438243180
-mas "Xcode", id: 497799835
 mas "QuickShade", id: 931571202
 mas "Save to Pocket", id: 1477385213
-mas "Flow", id: 1423210932
-mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "Things", id: 904280696
+mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
