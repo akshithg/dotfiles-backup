@@ -86,9 +86,12 @@
   light = false
   line-numbers = true
   navigate = true       # use n and N to move between diff sections
-  side-by-side = false
+  side-by-side = true
   syntax-theme = Dracula
+  features = decorations
 
+[delta "interactive"]
+    keep-plus-minus-markers = true
 
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
