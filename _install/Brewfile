@@ -31,6 +31,7 @@ brew "ripgrep"
 brew "rustup-init"
 brew "stow"
 brew "tmux"
+brew "zola"
 brew "zsh"
 cask "activitywatch"
 cask "cold-turkey-blocker"
@@ -45,17 +46,18 @@ cask "hiddenbar"
 cask "iterm2"
 cask "logi-options-plus"
 cask "mactex-no-gui"
-cask "miniconda"
+cask "miniforge"
 cask "netnewswire"
 cask "notion"
 cask "obsidian"
 cask "raycast"
 cask "shottr"
-cask "slack"
 cask "sonos"
 cask "spotify"
 cask "thingsmacsandboxhelper"
 cask "visual-studio-code"
+cask "vlc"
+cask "webtorrent"
 cask "whatsapp"
 cask "zoom"
 cask "zotero"
@@ -65,6 +67,7 @@ mas "Drafts", id: 1435957248
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Flow", id: 1423210932
 mas "Hush", id: 1544743900
+mas "Kagi Inc.", id: 1622835804
 mas "Overlap", id: 1516950324
 mas "QuickShade", id: 931571202
 mas "Save to Pocket", id: 1477385213
