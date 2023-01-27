@@ -51,6 +51,7 @@
     # =========================[ Line #1 ]=========================
     anaconda                  # anaconda virtual environment
     virtualenv                # python virtual environment
+    context                   # user@host
     dir                       # current directory
     vcs                       # git status
     # command_execution_time  # previous command duration
@@ -63,7 +64,6 @@
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     command_execution_time    # previous command duration
-    context                   # user@host
     # time                    # current time
     # =========================[ Line #2 ]=========================
     newline                   # \n
@@ -107,7 +107,7 @@
   # Context format when not root: user@host. The whole thing grey.
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="%F{$grey}%n@%m%f"
   # Don't show context unless root or in SSH.
-  typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
+  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
   # Show previous command duration only if it's >= 5s.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5

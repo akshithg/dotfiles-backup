@@ -39,13 +39,11 @@ if is-at-least 5.1 && [ -d $MY_EXTENSIONS/zinit ]; then
   zinit light zsh-users/zsh-autosuggestions
 
   # Expand all aliases
-  ZSH_EXPAND_ALL_DISABLE=""
+  ZSH_EXPAND_ALL_DISABLE=word # All features enabled ('', word, alias)
   zinit light simnalamburt/zsh-expand-all
 
   # History substring search
   zinit light zsh-users/zsh-history-substring-search
-  bindkey '^[[A' history-substring-search-up
-  bindkey '^[[B' history-substring-search-down
 
   # Ctrlf
   zinit light simnalamburt/ctrlf
@@ -53,6 +51,7 @@ if is-at-least 5.1 && [ -d $MY_EXTENSIONS/zinit ]; then
   # Theme
   zinit light dracula/zsh
 
+  # Syntax highlighting
   zinit light zdharma/fast-syntax-highlighting
 
   # Other
@@ -90,8 +89,8 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND='#FF5C5
 
 # History settings
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=999
 setopt append_history           # allow multiple sessions to append to one history
 setopt bang_hist                # treat ! special during command expansion
 setopt extended_history         # Write history in :start:elasped;command format
@@ -103,17 +102,20 @@ setopt hist_reduce_blanks       # Remove extra blanks from each command added to
 setopt hist_verify              # Don't execute immediately upon history expansion
 setopt inc_append_history       # Write to history file immediately, not when shell quits
 setopt share_history            # Share history among all sessions
+bindkey '^[[B' history-substring-search-down
+bindkey '^[[A' history-substring-search-up
 
-# Tab completion
-zstyle ':completion:*' menu select
+# Tab-completion / Auto-completion
+zstyle ':completion:*' menu select # show completion menu on succesive tab presses
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # '' - complete the current word exactly
 # 'm:{a-zA-Z}={A-Za-z}' - handle upper and lower case interchangeable
 # 'l:|=* r:|=*' - complete on the left side of the written text, e.g. bar -> foobar
 # 'r:|[._-]=* r:|=*' -  partial completion before . or _ or -
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt complete_in_word         # cd /ho/sco/tm<TAB> expands to /home/scott/tmp
 setopt auto_menu                # show completion menu on succesive tab presses
 # setopt autocd                   # cd to a folder just by typing it's name
+setopt globdots                 # include hidden files in globbing
 setopt complete_aliases         # complete aliases
 ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # These "eat" the auto prior space after a tab complete
 
@@ -124,20 +126,27 @@ setopt interactive_comments     # allow # comments in shell; good for copy/paste
 typeset -U path                 # keep duplicates out of the path
 
 # paths
-for file in ~/.path/*; do
-  source $file
-done
+if [ -d ~/.path ]; then
+  for file in ~/.path/*; do
+    source $file
+  done
+fi
 
 # source
-for file in ~/.source/*; do
-  source $file
-done
+if [ -d ~/.source ]; then
+  for file in ~/.source/*; do
+    source $file
+  done
+fi
 
 # alias
-for file in ~/.alias/*; do
-  source $file
-done
+if [ -d ~/.alias ]; then
+  for file in ~/.alias/*; do
+    source $file
+  done
+fi
 
+# local config
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
