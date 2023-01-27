@@ -34,7 +34,6 @@ brew "tmux"
 brew "zola"
 brew "zsh"
 cask "activitywatch"
-cask "cold-turkey-blocker"
 cask "cron"
 cask "cscreen"
 cask "discord"
@@ -59,9 +58,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "webtorrent"
 cask "whatsapp"
-cask "zoom"
 cask "zotero"
-mas "Asphalt 9", id: 1491129197
 mas "Dark Reader for Safari", id: 1438243180
 mas "Drafts", id: 1435957248
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
