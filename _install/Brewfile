@@ -22,7 +22,9 @@ brew "glow"
 brew "htop"
 brew "llvm"
 brew "mas"
+brew "n"
 brew "neovim"
+brew "ninja"
 brew "pandoc"
 brew "pkg-config"
 brew "pygments"
@@ -34,6 +36,7 @@ brew "tmux"
 brew "zola"
 brew "zsh"
 cask "activitywatch"
+cask "cold-turkey-blocker"
 cask "cron"
 cask "cscreen"
 cask "discord"
@@ -51,23 +54,21 @@ cask "notion"
 cask "obsidian"
 cask "raycast"
 cask "shottr"
-cask "sonos"
 cask "spotify"
 cask "thingsmacsandboxhelper"
 cask "visual-studio-code"
-cask "vlc"
-cask "webtorrent"
-cask "whatsapp"
+cask "zoom"
 cask "zotero"
 mas "Dark Reader for Safari", id: 1438243180
 mas "Drafts", id: 1435957248
-mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "EasyRes", id: 688211836
 mas "Flow", id: 1423210932
 mas "Hush", id: 1544743900
-mas "Kagi Inc.", id: 1622835804
+mas "Menu Bar Controller for Sonos", id: 1357379892
+mas "one sec", id: 1532875441
 mas "Overlap", id: 1516950324
 mas "QuickShade", id: 931571202
-mas "Save to Pocket", id: 1477385213
+mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
 mas "Xcode", id: 497799835

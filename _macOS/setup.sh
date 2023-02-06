@@ -99,6 +99,7 @@ defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 defaults write com.apple.finder "_FXShowPosixPathInTitle" -bool true
 defaults write com.apple.finder "_FXSortFoldersFirst" -bool true
 defaults write com.apple.finder "ShowStatusBar" -bool true
+defaults write com.apple.Finder "AppleShowAllFiles" true
 # defaults write com.apple.finder "ShowPathbar" -bool true
 defaults write com.apple.finder "QLEnableTextSelection" -bool true
 defaults write com.apple.finder "QuitMenuItem" -bool true

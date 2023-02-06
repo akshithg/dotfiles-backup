@@ -3,7 +3,7 @@
 function command_exists() {
     if command -v "$@" > /dev/null 2>&1 ; then
         true
-    elif [ $@ == *".app" ] && [ -d "/Applications/$@" ] ; then
+    elif [ -d "/Applications/$@" ] ; then
         true
     else
         false
