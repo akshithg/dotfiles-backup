@@ -1,0 +1,3 @@
+if [ -f $HOME/.docker/init-zsh.sh ]; then
+  source $HOME/.docker/init-zsh.sh
+fi

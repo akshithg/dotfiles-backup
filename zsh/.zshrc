@@ -57,7 +57,8 @@ if is-at-least 5.1 && [ -d $MY_EXTENSIONS/zinit ]; then
   # Other
   zinit light zsh-users/zsh-completions
 
-  autoload -Uz compinit && compinit
+  autoload -Uz compinit
+  compinit
   zinit cdreplay
 else
   # Default terminal
@@ -67,7 +68,8 @@ else
     *)
       PS1='%n@%m:%~%(!.#.$) ';;
   esac
-  autoload -Uz compinit && compinit
+  autoload -Uz compinit
+  compinit
 fi
 
 #
@@ -108,6 +110,12 @@ bindkey '^[[A' history-substring-search-up
 # Tab-completion / Auto-completion
 zstyle ':completion:*' menu select # show completion menu on succesive tab presses
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' file-list all
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$HOME/.zcompcache/"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
 # '' - complete the current word exactly
 # 'm:{a-zA-Z}={A-Za-z}' - handle upper and lower case interchangeable
 # 'l:|=* r:|=*' - complete on the left side of the written text, e.g. bar -> foobar
