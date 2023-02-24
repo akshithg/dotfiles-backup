@@ -16,3 +16,6 @@
 [submodule "_theme/dracula/git"]
 	path = _theme/dracula/git
 	url = git@github.com:dracula/git.git
+[submodule "_theme/github/iterm"]
+	path = _theme/github/iterm
+	url = git@github.com:cdalvaro/github-vscode-theme-iterm.git
