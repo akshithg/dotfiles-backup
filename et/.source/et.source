@@ -1,0 +1,6 @@
+export ET_NO_TELEMETRY=1
+
+function ssh__() {
+    # fails for ProxyJump - https://github.com/MisterTea/EternalTerminal/issues/559
+    et -c "tmux -CC new -A -s main" "$@"
+}
