@@ -4,6 +4,12 @@ set -e
 
 source utils.sh
 
+pTitle "Create base directories"
+mkdir -p ~/.config
+mkdir -p ~/.local/bin
+mkdir -p ~/.local/share
+
+
 pTitle "Installing symlinks"
 
 pStep "Check `stow` is installed"
