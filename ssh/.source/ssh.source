@@ -1,3 +1,7 @@
+function ssh_() {
+    ssh -t $@ "tmux -CC new -A -s ssh"
+}
+
 # start ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent` &>/dev/null
