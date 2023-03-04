@@ -46,12 +46,20 @@
   local cyan='#9AEDFE'
   local white='#F1F1F0'
 
+  # source my custom prompt segments
+  function prompt_my_project() {
+    local project_name=$MY_PROJECT_NAME
+    [[ -z $project_name ]] && return
+    p10k segment -i '👨🏽‍💻' -t $project_name
+  }
+
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     context                   # user@host
     dir                       # current directory
     vcs                       # git status
+    my_project                # my_project - custom segment
     # command_execution_time  # previous command duration
     # =========================[ Line #2 ]=========================
     newline                   # \n
