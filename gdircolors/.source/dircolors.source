@@ -1,0 +1,1 @@
+test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)

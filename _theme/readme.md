@@ -3,6 +3,7 @@
 ## Apps that use themes
 
 - bat
+- dircolors
 - iterm2
 - terminal.app
 - tmux
