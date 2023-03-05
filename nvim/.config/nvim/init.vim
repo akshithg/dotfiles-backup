@@ -206,7 +206,8 @@ try
   Plug 'vim-airline/vim-airline'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'dracula/vim', { 'as': 'dracula' }
+  " Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'arcticicestudio/nord-vim'
 
   " Syntax
   let g:polyglot_disabled = ['v'] | Plug 'sheerun/vim-polyglot'

@@ -1,21 +1,6 @@
 [submodule "_extensions/zinit"]
 	path = _extensions/zinit
 	url = git@github.com:zdharma-continuum/zinit.git
-[submodule "_theme/dracula/iterm"]
-	path = _theme/dracula/iterm
-	url = git@github.com:dracula/iterm.git
-[submodule "_theme/dracula/terminal-app"]
-	path = _theme/dracula/terminal-app
-	url = git@github.com:dracula/terminal-app.git
-[submodule "_theme/dracula/xcode"]
-	path = _theme/dracula/xcode
-	url = git@github.com:dracula/xcode.git
 [submodule "_extensions/vim-plug"]
 	path = _extensions/vim-plug
 	url = git@github.com:junegunn/vim-plug.git
-[submodule "_theme/dracula/git"]
-	path = _theme/dracula/git
-	url = git@github.com:dracula/git.git
-[submodule "_theme/github/iterm"]
-	path = _theme/github/iterm
-	url = git@github.com:cdalvaro/github-vscode-theme-iterm.git
