@@ -1,17 +1,24 @@
-# Themes
+# Notes on theme
 
-## Apps that use themes
+Use themes with both light and dark variants.
 
-- bat
-- dircolors
+- [catppuccin](https://catppuccin.com)
+
+## Apps that support themes
+
+Terminal apps:
+
 - iterm2
 - terminal.app
-- tmux
+
+CLI apps:
+
+- bat: a cat clone
+- delta: diff viewer
 - vim
-- vscode
+- vivid: generates LS_COLORS
 
-## List of themes
+GUI apps:
 
-- [dracula](https://draculatheme.com)
-- [nord](https://www.nordtheme.com)
-- [solarized](https://ethanschoonover.com/solarized)
+- obsidian
+- vscode: get using extensions

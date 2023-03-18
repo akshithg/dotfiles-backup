@@ -1,0 +1,12 @@
+
+themes=$HOME/.config/vivid/themes
+dark_theme=$themes/catppuccin-mocha.yml
+light_theme=$themes/catppuccin-latte.yml
+
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+    if [ -z $(defaults read -g AppleInterfaceStyle 2> /dev/null ) ]; then
+        export LS_COLORS=$(vivid generate $light_theme)
+    else
+        export LS_COLORS=$(vivid generate $dark_theme)
+    fi
+fi

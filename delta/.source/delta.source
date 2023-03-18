@@ -1,0 +1,15 @@
+dark_theme='syntax-theme = Catppuccin-mocha'
+light_theme='syntax-theme = Catppuccin-latte'
+
+config_file="$HOME/.gitconfig"
+if [ -L $config_file ]; then
+    config_file=$HOME/$(readlink $config_file)
+fi
+
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+    if [ -z $(defaults read -g AppleInterfaceStyle 2> /dev/null ) ]; then
+        sed -i '' -e 's/$dark_theme/$light_theme/g' $config_file
+    else
+        sed -i '' -e 's/$light_theme/$dark_theme/g' $config_file
+    fi
+fi

@@ -1,5 +1,5 @@
-# Set the theme to "TwoDark"
---theme="Nord"
+# Set the theme
+--theme="Catppuccin-latte"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
