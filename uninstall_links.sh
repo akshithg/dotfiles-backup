@@ -1,8 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 set -e
 
-source utils.sh
+source ./utils.sh
 
 pTitle "Uninstalling symlinks"
 
