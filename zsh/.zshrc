@@ -52,7 +52,7 @@ if is-at-least 5.1 && [ -d $MY_EXTENSIONS/zinit ]; then
   zinit light dracula/zsh
 
   # Syntax highlighting
-  zinit light zdharma/fast-syntax-highlighting
+  zinit light zdharma-continuum/fast-syntax-highlighting
 
   # Other
   zinit light zsh-users/zsh-completions

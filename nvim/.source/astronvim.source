@@ -1,7 +1,7 @@
-dark_theme=--theme=Catppuccin-mocha
-light_theme=--theme=Catppuccin-latte
+dark_theme='flavour = "mocha"'
+light_theme='flavour = "latte"'
 
-config_file="$HOME/.config/bat/config"
+config_file="$HOME/.config/astronvim/lua/user/init.lua"
 if [ -L $config_file ]; then
     config_file=$HOME/$(readlink $config_file)
 fi
