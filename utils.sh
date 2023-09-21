@@ -10,6 +10,12 @@ function command_exists() {
     fi
 }
 
+# update submodules
+function update_git_submodules() {
+    pStep "Updating submodules"
+    git submodule update --init --recursive
+    pStepDone "Submodules updated"
+}
 
 # pretty print
 function pTitle()     { echo "\033[1m$@\033[0m";  }

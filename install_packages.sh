@@ -4,11 +4,9 @@ set -e
 
 source ./utils.sh
 
-pTitle "Installing packages and dependencies"
+update_git_submodules
 
-pStep "Updating submodules"
-git submodule update --init --recursive
-pStepDone "Submodules updated"
+pTitle "Installing packages and dependencies"
 
 pStep "Determining OS"
 if [[ "$OSTYPE" == "darwin"* ]]; then

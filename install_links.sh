@@ -4,11 +4,17 @@ set -e
 
 source ./utils.sh
 
-pTitle "Create base directories"
-mkdir -p ~/.config
-mkdir -p ~/.local/bin
-mkdir -p ~/.local/share
+update_git_submodules
 
+pTitle "Create base directories"
+pStep "~/.config"
+mkdir -p ~/.config
+pStep "~/.local/bin"
+mkdir -p ~/.local/bin
+pStep "~/.local/share"
+mkdir -p ~/.local/share
+pStep "~/.ssh"
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
 
 pTitle "Installing symlinks"
 
