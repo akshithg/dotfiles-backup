@@ -27,5 +27,5 @@ if [[ "$OS" == "macOS" ]]; then
   fi
 
   pStep "Installing Homebrew packages"
-  brew bundle install --file=_install/Brewfile
+  brew bundle install --file=_macOS/Brewfile
 fi

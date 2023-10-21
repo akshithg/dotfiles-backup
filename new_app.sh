@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-# input : folder_name
+# input : app_name
 # output:
-# folder_name
+# app_name
 # ├── .alias
 # ├── .path
 # ├── .source
@@ -10,7 +10,7 @@
 
 # check input
 if [ -z "$1" ]; then
-    echo "Usage: new.sh <folder_name>"
+    echo "Usage: new.sh <app_name>"
     exit 1
 fi
 
