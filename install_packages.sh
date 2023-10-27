@@ -10,22 +10,27 @@ pTitle "Installing packages and dependencies"
 
 pStep "Determining OS"
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  OS="macOS"
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  OS="Linux"
+    OS="macOS"
+    elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    OS="Linux"
 else
-  pError "Unsupported OS: $OSTYPE"
-  exit 1
+    pError "Unsupported OS: $OSTYPE"
+    exit 1
 fi
 pStepDone "OS: $OS"
 
 if [[ "$OS" == "macOS" ]]; then
-  if ! command -v brew &> /dev/null; then
-    pStep "Installing Homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    pStepDone "Homebrew installed"
-  fi
-
-  pStep "Installing Homebrew packages"
-  brew bundle install --file=_macOS/Brewfile
+    pStep "Installing Homebrew packages"
+    ./_install/brew_install.sh
+    pStepDone "Homebrew packages installed"
 fi
+
+if [[ "$OS" == "Linux" ]]; then
+    pStep "Installing apt packages"
+    ./_install/apt_install.sh
+    pStepDone "Apt packages installed"
+fi
+
+pStep "Installing Rustup and Binary Crates"
+./_install/cargo_install.sh
+pStepDone "Rustup and Binary Crates installed"
