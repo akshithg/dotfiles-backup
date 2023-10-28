@@ -14,5 +14,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 else
     # TODO: Add support for other OSes
-    sed -i '' -e 's/$dark_theme/$light_theme/g' $config_file
+    sed -i -e 's/$dark_theme/$light_theme/g' $config_file
 fi
