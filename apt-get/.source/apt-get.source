@@ -1,0 +1,10 @@
+
+# define update function
+function apt-update() {
+    echo "apt update"
+    sudo apt update
+    echo "apt upgrade"
+    sudo apt upgrade
+    echo "apt autoremove"
+    sudo apt autoremove
+}

@@ -18,7 +18,7 @@ mkdir -p ~/.ssh && chmod 700 ~/.ssh
 
 pTitle "Installing symlinks"
 
-pStep "Check `stow` is installed"
+pStep "Check stow is installed"
 if command_exists stow ; then
   pStepDone "stow is installed"
   STOW_EXEC=stow

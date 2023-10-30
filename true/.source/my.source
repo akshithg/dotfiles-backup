@@ -1,0 +1,14 @@
+update () {
+    if [[ $(declare -f brew-update) ]]; then
+        brew-update
+    fi
+
+    if [[ $(declare -f apt-update) ]]; then
+        apt-update
+    fi
+
+    if [[ $(declare -f cargo-update) ]]; then
+        cargo-update
+    fi
+
+}

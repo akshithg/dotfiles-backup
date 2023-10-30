@@ -2,13 +2,18 @@ export HOMEBREW_BUNDLE_FILE=~/.dotfiles/_install/Brewfile
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ANALYTICS=1
 
+
+# Set PATH, MANPATH, etc., for Homebrew.
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # define update function
-function update() {
-  echo "Updating Homebrew..."
-  brew update
-  echo "Upgrading Homebrew..."
-  brew upgrade
-  echo "Cleaning up Homebrew..."
-  brew cleanup
-  echo "Done!"
+function brew-update() {
+    echo "brew update"
+    brew update
+    echo "brew upgrade"
+    brew upgrade
+    echo "brew cleanup"
+    brew cleanup
 }
