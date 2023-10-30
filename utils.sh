@@ -13,7 +13,7 @@ function command_exists() {
 # update submodules
 function update_git_submodules() {
     pStep "Updating submodules"
-    git submodule update --init --recursive
+    git submodule for each git pull
     pStepDone "Submodules updated"
 }
 
