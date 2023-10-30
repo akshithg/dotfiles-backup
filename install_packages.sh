@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 
 set -e
 
@@ -11,10 +11,10 @@ pTitle "Installing packages and dependencies"
 pStep "Determining OS"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     OS="macOS"
-    elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     OS="Linux"
 else
-    pError "Unsupported OS: $OSTYPE"
+    pBad "Unsupported OS: $OSTYPE"
     exit 1
 fi
 pStepDone "OS: $OS"

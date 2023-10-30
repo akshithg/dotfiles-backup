@@ -5,19 +5,19 @@ set -eu
 install_apt_packages() {
     sudo apt update
     sudo apt install -y \
-        bat \
+        build-essential \
+        fzf \
         git \
         git-extras \
-        htop \
         jq \
         llvm \
+        n \
         neovim \
+        ninja-build \
         python3 \
         shellcheck \
         stow \
         tmux \
-        vivid \
-        wget \
         zsh
 }
 
